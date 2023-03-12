@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Konstantin Denerz</title>
+    <link>http://konstantin-denerz.com/post/</link>
+    <description>Recent content in Posts on Konstantin Denerz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 20 Feb 2023 20:19:37 +0100</lastBuildDate><atom:link href="http://konstantin-denerz.com/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello Friend</title>
+      <link>http://konstantin-denerz.com/hello-friend/</link>
+      <pubDate>Mon, 20 Feb 2023 20:19:37 +0100</pubDate>
+      
+      <guid>http://konstantin-denerz.com/hello-friend/</guid>
+      <description>Welcome Hello and w and I&amp;rsquo;m a consultant, coach, and developer with over 20 years of experience in development on platforms like .NET, Java, and web. During this time, I have gained extensive experience in various technologies, frameworks, and tools. My current focus is on Angular and UX/UI Design, and I&amp;rsquo;m passionate about sharing technical knowledge with others. Find more about me on the about me page.
+Sharing is caring I love to share my technical knowledge with others, and that&amp;rsquo;s one of the main reasons why I started this blog.</description>
+    </item>
+    
+  </channel>
+</rss>
