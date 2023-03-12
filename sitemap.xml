@@ -2,30 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://konstantin-denerz.com/hello-friend/</loc>
-    <lastmod>2023-02-20T20:19:37+01:00</lastmod>
+    <loc>https://konstantin-denerz.com/hello-friend/</loc>
+    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/tags/initial_commit/</loc>
-    <lastmod>2023-02-20T20:19:37+01:00</lastmod>
+    <loc>https://konstantin-denerz.com/tags/initial_commit/</loc>
+    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/</loc>
-    <lastmod>2023-02-20T20:19:37+01:00</lastmod>
+    <loc>https://konstantin-denerz.com/</loc>
+    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/post/</loc>
-    <lastmod>2023-02-20T20:19:37+01:00</lastmod>
+    <loc>https://konstantin-denerz.com/post/</loc>
+    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/tags/</loc>
-    <lastmod>2023-02-20T20:19:37+01:00</lastmod>
+    <loc>https://konstantin-denerz.com/tags/</loc>
+    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/about/</loc>
+    <loc>https://konstantin-denerz.com/privacy-policy/</loc>
+    <lastmod>2022-02-23T07:53:43+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/about/</loc>
     <lastmod>2021-11-09T07:53:43+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/legal-disclosure/</loc>
+    <loc>https://konstantin-denerz.com/legal-disclosure/</loc>
     <lastmod>2021-11-09T07:53:43+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/portfolio/</loc>
+    <loc>https://konstantin-denerz.com/portfolio/</loc>
     <lastmod>2021-11-09T07:53:43+01:00</lastmod>
   </url><url>
-    <loc>http://konstantin-denerz.com/categories/</loc>
+    <loc>https://konstantin-denerz.com/categories/</loc>
   </url>
 </urlset>
