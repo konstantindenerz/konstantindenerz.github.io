@@ -1,65 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Konstantin Denerz</title>
-    <link>https://konstantin-denerz.com/</link>
-    <description>Recent content on Konstantin Denerz</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 Mar 2023 20:19:37 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hello Friend</title>
-      <link>https://konstantin-denerz.com/hello-friend/</link>
-      <pubDate>Sun, 12 Mar 2023 20:19:37 +0100</pubDate>
-      
-      <guid>https://konstantin-denerz.com/hello-friend/</guid>
-      <description>Hello and welcome to my blog! My name is Konstantin Denerz, and I&amp;rsquo;m a consultant, coach, and developer with over 20 years of experience in development on platforms like .NET, Java, and web. During this time, I have gained extensive experience in various technologies, frameworks, and tools. My current focus is on Angular and UX/UI design, and I&amp;rsquo;m passionate about sharing technical knowledge with others. Find more about me on the about me page.</description>
-    </item>
-    
-    <item>
-      <title>Privacy Policy</title>
-      <link>https://konstantin-denerz.com/privacy-policy/</link>
-      <pubDate>Wed, 23 Feb 2022 07:53:43 +0100</pubDate>
-      
-      <guid>https://konstantin-denerz.com/privacy-policy/</guid>
-      <description>We are very delighted that you have shown interest in our enterprise. Data protection is of a particularly high priority for the management of the Konstantin Denerz. The use of the Internet pages of the Konstantin Denerz is possible without any indication of personal data; however, if a data subject wants to use special enterprise services via our website, processing of personal data could become necessary. If the processing of personal data is necessary and there is no statutory basis for such processing, we generally obtain consent from the data subject.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://konstantin-denerz.com/about/</link>
-      <pubDate>Tue, 09 Nov 2021 07:53:43 +0100</pubDate>
-      
-      <guid>https://konstantin-denerz.com/about/</guid>
-      <description>Hello, my name is Konstantin Denerz and I am a consultant currently working with @Thinktecture. With over 20 years of experience in product development, consulting, and customer projects, I have gained a wealth of knowledge and expertise in various platforms such as Java, .NET, and the web.
-My focus for the past 8 years has been web development with Angular, and I have had the opportunity to work on a variety of projects ranging from small-scale startups to large enterprises.</description>
-    </item>
-    
-    <item>
-      <title>Legal Disclosure</title>
-      <link>https://konstantin-denerz.com/legal-disclosure/</link>
-      <pubDate>Tue, 09 Nov 2021 07:53:43 +0100</pubDate>
-      
-      <guid>https://konstantin-denerz.com/legal-disclosure/</guid>
-      <description>Information in accordance with Section 5 TMG and Section 18, Subsection 2 MStV:
-Konstantin Denerz
-Krähenheck 10
-66679 Losheim am See
-Contact Information E-Mail: konstantin.denerz@gmail.com
-Internet address: https://konstantin-denerz.com
-Disclaimer Accountability for content The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents&amp;rsquo; accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity.</description>
-    </item>
-    
-    <item>
-      <title>Portfolio</title>
-      <link>https://konstantin-denerz.com/portfolio/</link>
-      <pubDate>Tue, 09 Nov 2021 07:53:43 +0100</pubDate>
-      
-      <guid>https://konstantin-denerz.com/portfolio/</guid>
-      <description>Welcome to my web development portfolio ✨ page! Here you&amp;rsquo;ll find code samples showcasing the latest web technologies that I use to create engaging user experiences.
-I believe the web is an incredible platform for developers to create amazing things, from stunning animations to interactive interfaces. These examples are designed to inspire and show the possibilities of modern web technologies, and to spark ideas for future projects.
-Whether you&amp;rsquo;re a developer, designer, or simply interested in web development, I hope you&amp;rsquo;ll find my page informative and inspiring.</description>
-    </item>
-    
-  </channel>
+    <channel>
+        <title>Konstantin Denerz</title>
+        <link>https://konstantin-denerz.com/</link>
+        <description>Recent content on Konstantin Denerz</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 12 Mar 2023 20:19:37 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Hello Friendpost</title>
+            <link>https://konstantin-denerz.com/hello-friend/</link>
+            <pubDate>Sun, 12 Mar 2023 20:19:37 +0100</pubDate>
+            
+            <guid>https://konstantin-denerz.com/hello-friend/</guid>
+            <description>Hello and welcome to my blog! My name is Konstantin Denerz, and I&amp;rsquo;m a consultant, coach, and developer with over 20 years of experience in development on platforms like .NET, Java, and web. During this time, I have gained extensive experience in various technologies, frameworks, and tools. My current focus is on Angular and UX/UI design, and I&amp;rsquo;m passionate about sharing technical knowledge with others. Find more about me on the about me page.</description>
+        </item>
+        
+    </channel>
 </rss>
