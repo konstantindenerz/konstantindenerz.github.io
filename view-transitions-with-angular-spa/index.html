@@ -661,7 +661,13 @@ Mask-position and transform properties are changed during CSS animation:</p>
 </span></span><span class="line"><span class="cl">    <span class="nx">bootstrapApplication</span><span class="p">(</span><span class="nx">AppComponent</span><span class="p">,</span> <span class="nx">appConfig</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
 </span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">10</span><span class="p">);</span>
-</span></span></code></pre></div><h2 id="conclusion">Conclusion</h2>
+</span></span></code></pre></div><h3 id="view-transitions-with-iframes">View Transitions with iFrames</h3>
+<p>In my case I use recorded videos to preview the projects.
+An alternative used by cool dev sites is the iframe.
+It allows you to preview a demo page with real code.
+Above I showed how to cache and reuse videos so that playback is not interrupted.
+This would not work with <code>iframes</code>, since they are re-executed when moved in the DOM.</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>To sum up, the View Transition API is a game-changer for developers looking to enhance their user interface with smooth and seamless animations.
 With the ability to easily animate between views, developers can create a more engaging user experience without the need for complex DOM structures or Angular animations.
 While the current implementation involves placing code in Angular application or patching the router,
