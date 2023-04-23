@@ -2,19 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://konstantin-denerz.com/tags/angular/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/animations/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/css/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/post/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/view-transitions-with-angular-spa/</loc>
+    <lastmod>2023-04-23T10:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://konstantin-denerz.com/hello-friend/</loc>
     <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
     <loc>https://konstantin-denerz.com/tags/initial_commit/</loc>
-    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
-  </url><url>
-    <loc>https://konstantin-denerz.com/</loc>
-    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
-  </url><url>
-    <loc>https://konstantin-denerz.com/post/</loc>
-    <lastmod>2023-03-12T20:19:37+01:00</lastmod>
-  </url><url>
-    <loc>https://konstantin-denerz.com/tags/</loc>
     <lastmod>2023-03-12T20:19:37+01:00</lastmod>
   </url><url>
     <loc>https://konstantin-denerz.com/privacy-policy/</loc>

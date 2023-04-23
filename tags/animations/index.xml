@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>animations on Konstantin Denerz</title>
+    <link>https://konstantin-denerz.com/tags/animations/</link>
+    <description>Recent content in animations on Konstantin Denerz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 Apr 2023 10:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/tags/animations/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>View Transitions with Angular (SPA)</title>
+      <link>https://konstantin-denerz.com/view-transitions-with-angular-spa/</link>
+      <pubDate>Sun, 23 Apr 2023 10:00:00 +0100</pubDate>
+      
+      <guid>https://konstantin-denerz.com/view-transitions-with-angular-spa/</guid>
+      <description>View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback.
+Use Case The use case in this article is a single page application built with Angular to demonstrate a portfolio of a user. As in most customer projects, I also set up and use a design system here.</description>
+    </item>
+    
+  </channel>
+</rss>
