@@ -195,7 +195,9 @@
 
 <p><strong>View transitions</strong> is a cool and powerful API we can use in our Angular application to create animated transitions between views to
 elevating the overall user experience and enhancing usability, resulting in positive user feedback.</p>
-<h2 id="use-case">Use Case</h2>
+<h2 id="update">Update</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>2023-09-12<span class="o">]</span> Angular router now supports View Transitions. <span class="o">(</span><span class="c1">#73e4bf2)</span>
+</span></span></code></pre></div><h2 id="use-case">Use Case</h2>
 <p>The use case in this article is a single page application built with <a href="https://angular.io/">Angular</a> to demonstrate a portfolio of a user.
 As in most customer projects, I also set up and use a design system here. I took the 3rd version of the great <a href="https://m3.material.io/">Google&rsquo;s Material Design</a>.</p>
 <p>The routing is configured so that I have 3 routes:</p>
@@ -216,7 +218,7 @@ I recommend the Canary version.</p>
 <p>Please check the browser support for the <a href="https://caniuse.com/mdn-api_viewtransition">ViewTransition API (Can I Use?)</a>.</p>
 <h3 id="source-code">Source Code</h3>
 <p>The source for the demo application is available on GitHub: <a href="https://github.com/konstantindenerz/labs-angular-view-transition-demo">Source Code</a></p>
-<p>⚠️ To run the application on your machine you have to clone, build and link the patched Angular router package too: <a href="https://github.com/konstantindenerz/angular/tree/view-transitions">my patched Angular fork</a></p>
+<p>⚠️ To run the application on your machine you have to clone, build and link the <a href="https://github.com/angular/angular/commit/73e4bf2ed2471faf44a49b591e19a390d5867449">Angular repo</a></p>
 <h2 id="motion-design">Motion Design</h2>
 <p>Motion Design is an important part of design systems that enhances the user experience of our web applications.
 When a user clicks on an interactive control, it triggers navigation from one view to another.
@@ -327,9 +329,17 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
 </span></span><span class="line"><span class="cl">      └─ ::view-transition-new<span class="o">(</span>preview<span class="o">)</span>
 </span></span></code></pre></div><p>Now we can use CSS to make interesting transitions and apply the style to pseudo elements.</p>
 <h2 id="angular--view-transitions">Angular &amp; View Transitions</h2>
-<p>The view transitions API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
+<p>Angular will support view transitions in the next release. It&rsquo;s already <a href="https://github.com/angular/angular/commit/73e4bf2ed2471faf44a49b591e19a390d5867449">merged</a>.</p>
+<p>Just add <code>withViewTransitions()</code> to router features array to enable view transitions. ✨</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// app.config.ts
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">provideRouter</span><span class="p">,</span> <span class="nx">withViewTransitions</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">appConfig</span><span class="o">:</span> <span class="nx">ApplicationConfig</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">provideRouter</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="nx">withViewTransitions</span><span class="p">())],</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p><del>The view transitions API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
 I forked the Angular repo and <a href="https://github.com/konstantindenerz/angular/commit/8ea4d971801e2e144ad46c3d9514360f0abf1526#diff-03cb1ea13f0b5890eb24ce6fef7a42eed85429da0a90cdb48ab06b58c30cb1c1R741-R766">changed the router</a> to demonstrate the view transitions in my demo application.
-💡 I think the router is responsible for the invocation of the startViewTransition method during router navigation.</p>
+💡 I think the router is responsible for the invocation of the startViewTransition method during router navigation.</del></p>
 <h3 id="workaround">Workaround</h3>
 <p>You can try the view transitions API without changing Angular framework.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// list.component.ts
@@ -662,9 +672,9 @@ Mask-position and transform properties are changed during CSS animation:</p>
 </span></span><span class="line"><span class="cl">    <span class="k">filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="pseudo-element-tree-is-preserved-after-multiple-reloads">Pseudo-Element tree is preserved after multiple reloads</h3>
-<p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1434757">https://bugs.chromium.org/p/chromium/issues/detail?id=1434757</a></p>
-<p>I created a temporary workaround to fix this issue during initial load / bootstrap of the Angular application:</p>
+</span></span></code></pre></div><h3 id="pseudo-element-tree-is-preserved-after-multiple-reloads"><del>Pseudo-Element tree is preserved after multiple reloads</del></h3>
+<p><del>[CLOSED] <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1434757">https://bugs.chromium.org/p/chromium/issues/detail?id=1434757</a></del></p>
+<p><del>I created a temporary workaround to fix this issue during initial load / bootstrap of the Angular application:</del></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">bootstrapApplication</span><span class="p">(</span><span class="nx">AppComponent</span><span class="p">,</span> <span class="nx">appConfig</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
@@ -678,8 +688,8 @@ This would not work with iframes, since they are re-executed when moved in the D
 <h2 id="conclusion">Conclusion</h2>
 <p>To sum up, the View Transition API is a game-changer for developers looking to enhance their user interface with smooth and seamless animations.
 With the ability to easily animate between views, developers can create a more engaging user experience without the need for complex DOM structures or Angular animations.
-While the current implementation involves placing code in Angular application or patching the router,
-the future holds even greater promise as the router takes over this functionality.</p>
+<del>While the current implementation involves placing code in Angular application or patching the router,
+the future holds even greater promise as the router takes over this functionality.</del></p>
 <p>If you&rsquo;re interested in learning more about View Transitions, Angular, Material, and CSS, be sure to follow me on <a href="https://twitter.com/kdenerz">Twitter</a> for more insights and updates.</p>
 
 <div class="back-container">
