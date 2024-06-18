@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
+    
+    
+    <meta name="twitter:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title"
+          content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz">
+    <meta name="twitter:description"
+          content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
+    <meta name="twitter:site" content="@kdenerz">
+    <meta name="twitter:creator" content="@kdenerz">
+
+    
+
+
+    <meta property="og:title" content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz">
+
+    
+    <meta property="og:type" content="article">
+    
+    <meta property="article:published_time" content="2024-06-18">
+    
+    <meta property="og:url" content="https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/">
+    <meta property="og:site_name" content="Konstantin Denerz">
+    
+    <meta property="og:tags" content="angular">
+    
+    <meta property="og:tags" content="material">
+    
+    <meta property="og:tags" content="design tokens">
+    
+    <meta property="og:tags" content="design system">
+    
+
+    
+    
+    <meta property="og:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp">
+    
+
+    <meta property="og:description"
+          content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
+
+    
+
+    
+    <script type="text/javascript" src="/main.min.31d6eee507fca3bb91129c0004e8cb4eae065edec6a45541327fb3bdc7755a4f.js" defer></script>
+    
+    <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.42ed24d471dc15352f2f90ce2e41cadaeac6e89265be102d2d30b61f1c9c8713.css">
+    
+    
+    <title>Konstantin Denerz | Angular Material 3 Theming: Design Tokens and System Variables</title>
+</head>
+<body>
+
+
+
+
+
+
+
+<div class="app-bar">
+    <div class="top">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <a href="/" title="Konstantin Denerz" aria-label="Navigate To Home">
+            <div class="logo  labs-ripple"
+                 style="--logoText: 'KONSTΔNTIN DENERZ'">
+                <svg xmlns="http://www.w3.org/2000/svg" width="6.729" height="11.088" viewBox="0 0 6.729 11.088">
+                    <path
+                            d="M7.248-4.444a.609.609,0,0,0,0-.862L2.314-10.24a.609.609,0,0,0-.862,0l-.576.576a.609.609,0,0,0,0,.861L4.786-4.875.876-.946a.609.609,0,0,0,0,.861L1.452.49a.609.609,0,0,0,.862,0Z"
+                            transform="translate(-0.698 10.419)"/>
+                </svg>
+                <span>
+                KONSTΔNTIN DENERZ
+            </span>
+            </div>
+        </a>
+        <div class="theme-menu">
+            <div class="labs-ripple labs-ripple-center">
+                <button id="theme-toggle" aria-label="Switch between Light and Dark Theme">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="19.375" height="19.375" viewBox="0 0 19.375 19.375">
+                        <path data-name="Path 13"
+                              d="M.312-7.5A9.687,9.687,0,0,0,10,2.187,9.687,9.687,0,0,0,19.687-7.5,9.688,9.688,0,0,0,10-17.187,9.687,9.687,0,0,0,.312-7.5ZM10-.312V-14.687A7.184,7.184,0,0,1,17.187-7.5,7.184,7.184,0,0,1,10-.312Z"
+                              transform="translate(-0.313 17.187)"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="inline-menu">
+            <div class="nav-border container">
+                <nav id="nav" class="nav justify-content-center">
+                    
+                    
+                    
+                    
+                    <a class="nav-link labs-ripple   "
+                       href="/">
+                        
+                        Home
+                    </a>
+                    
+                    
+                    
+                    
+                    <a class="nav-link labs-ripple   "
+                       href="/about">
+                        
+                        About
+                    </a>
+                    
+                    
+                    
+                    
+                    <a class="nav-link labs-ripple   "
+                       href="/portfolio">
+                        
+                        Portfolio
+                    </a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div id="content">
+
+
+
+
+<figure class="post-cover fullwidth dark">
+    <picture>
+        <source srcset="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix.09b0ef730971937559806cb4fa6f5a680bd44b716076c0159d25f9517c6e41c08db44cc928c677e50cd577c7b3b523e418ea259df0bea058b6691f041bcadd53.webp" type="image/webp">
+        <source srcset="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix.76e8e77dcf0d8f71a4cb30b79b6be75ec7fee29d9c4499977621ce65d0cc4de693454bf1be9290704f3371dffdf68d359dd61148a75e60a00dab739b6a95666d.jpg" type="image/jpeg">
+        <img src="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix.76e8e77dcf0d8f71a4cb30b79b6be75ec7fee29d9c4499977621ce65d0cc4de693454bf1be9290704f3371dffdf68d359dd61148a75e60a00dab739b6a95666d.jpg" alt="Angular Material 3 Theming: Design Tokens and System Variables" loading="lazy">
+    </picture>
+    
+    <h1>Angular Material 3 Theming: Design Tokens and System Variables</h1>
+    
+    
+</figure>
+
+
+
+<p>If you work with <a href="https://angular.dev/">Angular</a> and don&rsquo;t want to or can&rsquo;t develop every single component yourself,
+you use a framework like <a href="https://material.angular.io/">Angular Material</a>.
+One of the great things about the framework is that it is based on a modern design
+system, <a href="https://m3.material.io/">Google&rsquo;s Material</a> version 3, and supports <strong>design tokens</strong>.
+This provides every product/project team with a common foundation that Product Owners, designers, customers, and
+developers can work on together.</p>
+<p>In this article, I describe how to implement a Material 3 theme using the Angular Material framework.</p>
+<h2 id="demo-application--source-code">Demo Application &amp; Source Code</h2>
+<ul>
+<li><a href="https://konstantin-denerz.com/article-angular-material-3-system-tokens-theme/">Live Demo</a></li>
+<li><a href="https://github.com/konstantindenerz/article-angular-material-3-system-tokens-theme">Source Code</a></li>
+</ul>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/arIsiU7gSJw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<h2 id="what-are-design-tokens">What are Design Tokens?</h2>
+<p>Design tokens are essentially the building blocks of your design system.
+They store design-related values such as colors, typography, spacing and more.
+Think of them as the single source of truth for your app&rsquo;s <strong>design decisions</strong>. Using design tokens ensures consistency
+across your application and makes it easier to update your design system as your app evolves.</p>
+<p>Read more about <a href="https://m3.material.io/foundations/design-tokens/overview">Material 3 design tokens</a></p>
+<h3 id="hierarchy">Hierarchy</h3>
+<p>Let&rsquo;s look at the hierarchy of design tokens, for example, and we see that there are <em>four levels</em>. The <em>component
+tokens</em> reference the <em>system tokens</em>.</p>
+<p>By keeping the values in the <em>reference tokens</em> and abstracting them through the <em>system tokens</em>, we can implement a new
+theme (dark, light, high contrast) by simply assigning new <em>reference tokens</em> to the <em>system tokens</em>.</p>
+<p>Therefore, the <em>component tokens</em> should not hold hardcoded values or have any knowledge of theming. Ideally, theming
+should be resolved at the <strong>system level</strong>.</p>
+<h4 id="heading"></h4>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="p" style="">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/design-tokens-hierarchy.fd0460d6de6d9b2719ddf7af4d39b719bddfae18183545f348a6ed590e07a2d77aa2659b89a96f132d0c87dea0147c099f0e8e90ea8aac1c7e6de202d2ef77ea.webp" type="image/webp">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/design-tokens-hierarchy.f073339c68614bdc4d3b3ae6345d7f83d422f993730b789b426c3b50cb86ce5885faace2f883e7865e34e943349c311abb074d4685506868f6051605ecf14dea.jpg" type="image/jpeg">
+    <img src="https://konstantin-denerz.com/images/ng-m3/design-tokens-hierarchy.f073339c68614bdc4d3b3ae6345d7f83d422f993730b789b426c3b50cb86ce5885faace2f883e7865e34e943349c311abb074d4685506868f6051605ecf14dea.jpg" title=""
+         style="margin: 2rem .5rem .5rem .5rem;;;;">
+</picture>
+<div class="image-subtitle"></div>
+</p>
+<h3 id="css-variables">CSS Variables</h3>
+<p>On the web, we implement design tokens using CSS variables.</p>
+<p>From the system token:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">md</span><span class="p">.</span><span class="nc">sys</span><span class="p">.</span><span class="nc">color</span><span class="p">.</span><span class="nc">primary-container</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="nt">md</span><span class="p">.</span><span class="nc">ref</span><span class="p">.</span><span class="nc">palette</span><span class="p">.</span><span class="nc">primary90</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="p">#</span><span class="nn">FFD7F0</span>
+</span></span></code></pre></div><p>we get the CSS variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// reference token
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--md-ref-palette-primary90</span><span class="o">:</span> <span class="mh">#FFD7F0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// system token
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--md-sys-color-primary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-palette-primary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="transformation">Transformation</h3>
+<p>Typically, design tokens are maintained in design tools like <a href="https://figma.com">Figma</a>
+or <a href="https://penpot.app/">Penpot</a>. From there, they are exported to JSON files in formats such as
+the <a href="https://www.w3.org/community/design-tokens/">Design Token Community Group</a> format.
+These JSON files are then transformed into the respective platform, such as the web, using tools
+like <a href="https://amzn.github.io/style-dictionary/#/">Style Dictionary</a> or <a href="https://cobalt-ui.pages.dev/">Cobalt UI</a>.</p>
+<p>In this article, we assume that we already have the transformed (S)CSS files containing our reference and system tokens.</p>
+<h3 id="design-tokens-lib">Design Tokens Lib</h3>
+<p>When working with multiple teams on a design system, you can provide a corresponding design tokens library for each
+platform.
+For example, an npm package like <code>@my-company/design-tokens-web</code> can be created.
+This library would deliver the (S)CSS files containing the tokens.</p>
+<h2 id="setting-up-angular-material">Setting Up Angular Material</h2>
+<p>First things first, let&rsquo;s get Angular Material set up in your project. If you haven&rsquo;t already added it to your Angular
+app, here’s how you do it:</p>
+<ol>
+<li>Install Angular Material (in a mono repo):</li>
+</ol>
+<p>Use <code>@next</code> to get at least version <a href="https://github.com/angular/components/releases/tag/18.1.0-next.2">18.1.0-next.2</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npx ng add @angular/material@next --project<span class="o">=</span>demo
+</span></span></code></pre></div><ol start="2">
+<li>Custom theme:
+During the setup, you’ll be prompted to choose a pre-built theme OR custom theme. For this example, select the &quot;
+Custom&quot; theme. The schematics generate styles where <code>mat.core</code>, <code>mat.define-theme</code>, and <code>mat.all-components-themes</code>
+are called. We won&rsquo;t need this in this form because we&rsquo;re doing something custom.</li>
+</ol>
+<h2 id="custom-theme">Custom Theme</h2>
+<h3 id="component-tokens">Component Tokens</h3>
+<p>The output of the Angular Material 3 theme with a predefined color palette looks like this:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="p" style="">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/m3-predefined-theme-tokens.9b1d559bc161239392079e819bf3ecfad72ff58d6f1f9cb0c11f9d44814fb5a5dc43472f95a445dcb46bb31304839488e778bbd981412c9132729ba7c89e6ab1.webp" type="image/webp">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/m3-predefined-theme-tokens.feccaaeff7e345f0035a5d492277921b39efa899a1576962412120ea173e770164ca8b8da030bfd57f6304af5202598c37d48e42a7488f68c33af738ced92389.jpg" type="image/jpeg">
+    <img src="https://konstantin-denerz.com/images/ng-m3/m3-predefined-theme-tokens.feccaaeff7e345f0035a5d492277921b39efa899a1576962412120ea173e770164ca8b8da030bfd57f6304af5202598c37d48e42a7488f68c33af738ced92389.jpg" title=""
+         style="margin: 2rem .5rem .5rem .5rem;;;;">
+</picture>
+<div class="image-subtitle"></div>
+</p>
+<p>You can see many component tokens defined on the root element. The following points are noticeable:</p>
+<ul>
+<li>The component tokens start with different prefixes. We have <code>--mat-</code> and <code>--mdc-</code>.</li>
+<li>The component tokens only have hardcoded values.</li>
+<li>There are many tokens (&gt;800), to be precise: <strong>476</strong> <code>mat</code> tokens and <strong>372</strong> <code>mdc</code> tokens.</li>
+</ul>
+<h3 id="scss-theming-api-vs-system-tokens">SCSS Theming API vs System Tokens</h3>
+<p>Previously, the <a href="https://material.angular.io/guide/theming#sass">Angular Material Sass Theming API</a> was used to style
+components in one place. However, considering the situation where our design decisions come as a collection of CSS
+variables via a library, such as <code>@labs/design-tokens-web</code>, using <strong>system tokens</strong> seems to be the better choice.</p>
+<h3 id="create-dark--light-themes-with-system-variables">Create Dark &amp; Light Themes with System Variables</h3>
+<p>We can create a theme using the <code>define-theme</code> (#6) function. In line #24, the global style for all components with the
+default theme is generated. In lines #29-30, the CSS variables (design tokens) for the dark theme are activated on the
+root element. The new flag <code>use-system-variables: true</code> enables the theming API to use system tokens instead of
+hardcoded values.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="hl"><span class="lnt"> 9
+</span></span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="hl"><span class="lnt">12
+</span></span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@angular/material&#39;</span> <span class="k">as</span> <span class="nn">mat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">light</span><span class="o">,</span> <span class="nv">$density</span><span class="o">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="n">mat</span><span class="o">.</span><span class="nf">define-theme</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">          <span class="na">color</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">theme-type</span><span class="o">:</span> <span class="nv">$type</span><span class="o">,</span>
+</span></span><span class="line hl"><span class="cl">                  <span class="na">use-system-variables</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="na">typography</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line hl"><span class="cl">                  <span class="na">use-system-variables</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="na">density</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">scale</span><span class="o">:</span> <span class="nv">$density</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$light-theme</span><span class="o">:</span> <span class="nf">create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">light</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dark-theme</span><span class="o">:</span> <span class="nf">create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">dark</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-themes</span><span class="p">(</span><span class="nv">$light-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-colors</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-typographies</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>You can see the result in the next screenshot. Now, the component tokens reference the system tokens instead of holding
+hardcoded values.
+There are system tokens for both <em>colors</em> and <em>typography</em>. Counting the system tokens, we see that 141 system tokens
+are
+used.</p>
+<p>Wow, that&rsquo;s cool, because now we don&rsquo;t have to theme with 800 component tokens but only need to define <strong>141 system
+tokens</strong>.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="p" style="">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/m3-sys-tokens.ca567a6d200355bfd7758d56cd514a996b7f991918fdaf56e84d3cb64b76248aa0a079285eeee19d1d4218bb109a24dd21a4340134469158c66e5b6677ab2da7.webp" type="image/webp">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/m3-sys-tokens.d0326c7aa70fba8cbdfaeeb48dadd9fefddbe4cdca7ec6230efa595d8410380d9fe015054a8ff45456edfa7eb5723f497f51ed01957c9a2b2fa849d694554bc4.jpg" type="image/jpeg">
+    <img src="https://konstantin-denerz.com/images/ng-m3/m3-sys-tokens.d0326c7aa70fba8cbdfaeeb48dadd9fefddbe4cdca7ec6230efa595d8410380d9fe015054a8ff45456edfa7eb5723f497f51ed01957c9a2b2fa849d694554bc4.jpg" title=""
+         style="margin: 2rem .5rem .5rem .5rem;;;;">
+</picture>
+<div class="image-subtitle"></div>
+</p>
+<p>Now we just need to provide the CSS system variables, and our themes will be complete.</p>
+<h2 id="provide-system-tokens">Provide System Tokens</h2>
+<p>With the new <code>use-system-variables</code> option, we can enable the use of system tokens.
+However, if we look at the token structure in the <a href="https://m3.material.io">Material 3 | Design System Specification</a>,
+we see that colors use the <code>md-sys-color</code> prefix and typography uses the <code>md-sys-typescale</code> prefix.
+Angular Material up to version 18.1.* only provides <code>sys</code> as a prefix.</p>
+<p>My token library would only provide system tokens with the following prefixes:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Prefix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Color</td>
+<td><code>--md-sys-color</code></td>
+</tr>
+<tr>
+<td>Typography</td>
+<td><code>--md-sys-typescale</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="my-merged-pull-request-29139---system-variables-prefix-option">My Merged Pull Request #29139 - System Variables Prefix Option</h3>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="p" style="">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/pr29139.ed78bf7399b9d627a5e80aafd9d592078d8e9e09eb314d420694077cab1505a7584286938d1545026a2df05e087c5b4c59f503f5094f1cf46233d715510b432a.webp" type="image/webp">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/pr29139.6e2952e182580ccde9497f0d6e6c6266d7325c68d5a6a5eadb533f6a0f33ad0af4f4b92212c3e7059c09af267ec562ef5e36a2397a5249532d83bc96367c46be.jpg" type="image/jpeg">
+    <img src="https://konstantin-denerz.com/images/ng-m3/pr29139.6e2952e182580ccde9497f0d6e6c6266d7325c68d5a6a5eadb533f6a0f33ad0af4f4b92212c3e7059c09af267ec562ef5e36a2397a5249532d83bc96367c46be.jpg" title=""
+         style="margin: 2rem .5rem .5rem .5rem;;;;">
+</picture>
+<div class="image-subtitle"></div>
+</p>
+<p>I provided the <a href="https://github.com/angular/components/pull/29139">pull request #29139</a> for <a href="https://material.angular.io/">Angular Material</a> so that we can use the Material 3 naming conventions at the system token level. ✨</p>
+<p>This has been merged 🎉 and should be included in the minor release 18.1.*.</p>
+<h3 id="using-system-variables-prefix">Using System Variables Prefix</h3>
+<p>In the following code, you can see that I define the different prefixes in lines #10 and #14:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="hl"><span class="lnt">10
+</span></span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="hl"><span class="lnt">14
+</span></span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@angular/material&#39;</span> <span class="k">as</span> <span class="nn">mat</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@function</span><span class="nf"> create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">light</span><span class="o">,</span> <span class="nv">$density</span><span class="o">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@return</span> <span class="n">mat</span><span class="o">.</span><span class="nf">define-theme</span><span class="p">((</span>
+</span></span><span class="line"><span class="cl">          <span class="na">color</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">theme-type</span><span class="o">:</span> <span class="nv">$type</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">use-system-variables</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+</span></span><span class="line hl"><span class="cl">                  <span class="na">system-variables-prefix</span><span class="o">:</span> <span class="n">md-sys-color</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="na">typography</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">use-system-variables</span><span class="o">:</span> <span class="n">true</span><span class="o">,</span>
+</span></span><span class="line hl"><span class="cl">                  <span class="na">system-variables-prefix</span><span class="o">:</span> <span class="n">md-sys-typescale</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">          <span class="na">density</span><span class="o">:</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">                  <span class="na">scale</span><span class="o">:</span> <span class="nv">$density</span>
+</span></span><span class="line"><span class="cl">          <span class="p">)</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">));</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$light-theme</span><span class="o">:</span> <span class="nf">create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">light</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$dark-theme</span><span class="o">:</span> <span class="nf">create-theme</span><span class="p">(</span><span class="nv">$type</span><span class="o">:</span> <span class="ni">dark</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-themes</span><span class="p">(</span><span class="nv">$light-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-colors</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-typographies</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The result looks like this 😍:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture class="p" style="">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/md-sys-tokens-custom-prefix.ee3b4d85999cb36212e4753ad12986d17b90cadef69adcf6c2d441ace7322b28e0c38bf2a4321d2c2d1334efe3c9b9bafbad9b8199e84b8fe3dab9f61e43823c.webp" type="image/webp">
+    <source srcset="https://konstantin-denerz.com/images/ng-m3/md-sys-tokens-custom-prefix.7f2b08d01b93e8306018d46558dc3af7e6a34b2f1ccd39a037913a2218465a13446590a1dc48d54d375226ab39393c133f59630bb06ea93f849874de7d075f87.jpg" type="image/jpeg">
+    <img src="https://konstantin-denerz.com/images/ng-m3/md-sys-tokens-custom-prefix.7f2b08d01b93e8306018d46558dc3af7e6a34b2f1ccd39a037913a2218465a13446590a1dc48d54d375226ab39393c133f59630bb06ea93f849874de7d075f87.jpg" title=""
+         style="margin: 2rem .5rem .5rem .5rem;;;;">
+</picture>
+<div class="image-subtitle"></div>
+</p>
+<p>How the definition of the system tokens looks will be covered in the next section.</p>
+<h3 id="token-library">Token Library</h3>
+<p>As described at the beginning, the tokens ideally come through a library.
+In my repository, I have created a library under <code>projects/design-tokens-web</code> to demonstrate providing reference and system tokens.
+It is better to publish the library, for example, under the name <code>@labs/design-tokens-web</code>.
+This can be installed with a specific version in the monorepo and would be located as version 1.0.0 under <code>node_modules/@labs/design-tokens-web</code>.</p>
+<p>In my demo app, I would simply include an Sass import like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@labs/design-tokens-web/theme&#39;</span><span class="p">;</span>
+</span></span></code></pre></div><p>The <code>theme.scss</code> file is an exported SCSS file from the token library that provides all reference and system tokens at the root level.</p>
+<p>Here is an example:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/theme.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/ref-typeface&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/ref-colors&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/sys-typescale&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/sys-color-dark&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/sys-color-light&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-surface</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-on-surface</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">font</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-body-large</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The reference tokens for the colors are provided with hardcoded values directly on the root element:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/ref-colors.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary0</span><span class="o">:</span> <span class="mh">#000000</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary10</span><span class="o">:</span> <span class="mh">#001b3c</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary20</span><span class="o">:</span> <span class="mh">#003061</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary30</span><span class="o">:</span> <span class="mh">#004689</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary40</span><span class="o">:</span> <span class="mh">#245fa6</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary50</span><span class="o">:</span> <span class="mh">#4378c1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><p>The mapping of the system tokens to the corresponding reference tokens is handled either through a media query or via the <code>.labs-theme-dark</code> CSS class.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-color-dark.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> dark</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-primary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-primary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-primary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-primary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-primary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-primary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-primary-fixed-dim</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-primary-fixed-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-secondary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-secondary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-secondary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-secondary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-secondary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-secondary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-secondary-fixed-dim</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-secondary-fixed-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-secondary-secondary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-tertiary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-tertiary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-tertiary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-tertiary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-tertiary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-tertiary-fixed</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-tertiary-fixed-dim</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-tertiary-fixed-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-tertiary-tertiary30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-error</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-error-error80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-error</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-error-error20</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-error-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-error-error30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-error-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-error-error90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-outline</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-variant-neutral-variant60</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral6</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-surface</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-variant-neutral-variant30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-surface-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-variant-neutral-variant80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-inverse-surface</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral90</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-inverse-on-surface</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-inverse-primary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary40</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-shadow</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-tint</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary80</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-outline-variant</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-variant-neutral-variant30</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-scrim</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-container-highest</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral22</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-container-high</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral17</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral12</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-container-low</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral10</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-container-lowest</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral4</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-bright</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral24</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-surface-dim</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-neutral-neutral6</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-surface</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-on-background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-on-surface</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nc">.labs-theme-dark</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">@include</span><span class="nd"> dark</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">@media</span> <span class="p">(</span><span class="n">prefers-color-scheme</span><span class="o">:</span> <span class="ni">dark</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> dark</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>And the same applies to the <a href="https://m3.material.io/styles/typography/type-scale-tokens">system tokens for typography</a>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-typescale.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// typography: https://m3.material.io/styles/typography/type-scale-tokens
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// display
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--md-sys-typescale-display-large-font</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-typeface-brand</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large-line-height</span><span class="o">:</span> <span class="mi">4</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large-size</span><span class="o">:</span> <span class="mi">3</span><span class="mf">.5625</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large-tracking</span><span class="o">:</span> <span class="mi">0</span><span class="mf">.015625</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large-weight</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-typeface-weight-regular</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-weight</span><span class="p">)</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-size</span><span class="p">)</span> <span class="o">/</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-line-height</span><span class="p">)</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-font</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//  ...
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></div><h4 id="override-component-tokens">Override Component Tokens</h4>
+<p>Currently, not all values (design decisions) such as states, elevation, shape, and others are represented by system tokens. You can use component tokens like <code>--mdc-extended-fab-container-shape</code> to adapt the framework to your own design system or you can submit a <a href="https://github.com/angular/components/">PR@Angular Material</a> or a <a href="https://github.com/material-components/material-components-web">PR@Material Components</a>.</p>
+<p>In my example application, I have a FAB button that should have a tertiary style. I define this by mapping component tokens to the respective system tokens:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/comp-fab.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">mat-fab</span><span class="o">][</span><span class="nt">tertiary</span><span class="o">]</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--mat-fab-foreground-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-on-tertiary-container</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">  <span class="na">--mdc-fab-container-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-tertiary-container</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>I would store such styles in a dedicated Material token library, for example, <code>@labs/design-tokens-angular-material</code>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>With Material 3 support in Angular Material, we have made a significant step forward. Extending to system tokens simplifies the mapping of component tokens to exported and transformed design tokens from custom design token libraries. My pull request in Angular Material goes a step further in harmonizing system tokens by offering support for Material 3 naming conventions.</p>
+<p>If you want to learn more about Angular, Material or Design Systems, follow me on my channels like <a href="https://x.com/kdenerz">X@kdenerz</a>, <a href="https://linkedin.com/in/konstantindenerz">LinkedIn</a>, <a href="https://mastodon.world/@konstantindenerz">Mastodon</a>, <a href="https://bsky.app/profile/konstantindenerz.bsky.social">Bluesky</a>, <a href="https://www.youtube.com/@konstantindenerz">YouTube</a>, <a href="https://github.com/konstantindenerz">GitHub</a>, <a href="https://codepen.io/konstantindenerz">CodePen</a> and take my business card ✨ with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npx konstantindenerz@latest -v
+</span></span></code></pre></div>
+<div class="back-container">
+    <span>
+        <button class="back labs-ripple back-button">back</button>
+    </span>
+</div>
+
+        </div><div class="social">
+    <div class="labs-ripple labs-ripple-center">
+        <a href="https://x.com/kdenerz" target="_blank" rel="noopener" aria-label="Visit my X profile">
+            <svg width="461" height="416" viewBox="0 0 461 416" xmlns="http://www.w3.org/2000/svg">
+                <path d="M363.2 0H433.8L279.6 176.2L461 416H319L207.7 270.6L80.5 416H9.80005L174.7 227.5L0.800049 0H146.4L246.9 132.9L363.2 0ZM338.4 373.8H377.5L125.1 40H83.1001L338.4 373.8Z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="https://github.com/konstantindenerz" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" viewBox="0 0 17.5 17.5">
+                <path d="M15.625-16.25H1.875A1.875,1.875,0,0,0,0-14.375V-.625A1.875,1.875,0,0,0,1.875,1.25h13.75A1.875,1.875,0,0,0,17.5-.625v-13.75A1.875,1.875,0,0,0,15.625-16.25ZM10.832-1.262c-.328.059-.449-.145-.449-.312,0-.211.008-1.289.008-2.16a1.522,1.522,0,0,0-.441-1.2c1.445-.16,2.969-.359,2.969-2.855a2.006,2.006,0,0,0-.668-1.523,2.443,2.443,0,0,0-.066-1.758c-.543-.168-1.785.7-1.785.7a6.085,6.085,0,0,0-1.625-.219,6.085,6.085,0,0,0-1.625.219s-1.242-.867-1.785-.7A2.424,2.424,0,0,0,5.3-9.312a1.962,1.962,0,0,0-.609,1.523c0,2.484,1.457,2.7,2.9,2.855a1.416,1.416,0,0,0-.414.871,1.371,1.371,0,0,1-1.887-.543,1.361,1.361,0,0,0-1-.668c-.633-.008-.043.4-.043.4.422.2.719.945.719.945.379,1.16,2.191.77,2.191.77,0,.543.008,1.426.008,1.586s-.117.371-.449.313A6.481,6.481,0,0,1,2.336-7.445a6.2,6.2,0,0,1,6.328-6.309,6.338,6.338,0,0,1,6.492,6.309A6.421,6.421,0,0,1,10.832-1.262ZM7-3.648c-.074.016-.145-.016-.152-.066s.043-.109.117-.125.145.023.152.074-.039.1-.117.117Zm-.371-.035c0,.051-.059.094-.137.094s-.145-.035-.145-.094.059-.094.137-.094S6.629-3.742,6.629-3.684Zm-.535-.043c-.016.051-.094.074-.16.051S5.809-3.75,5.824-3.8s.094-.074.16-.059.129.082.109.133Zm-.48-.211c-.035.043-.109.035-.168-.023s-.074-.125-.035-.16.109-.035.168.023S5.648-3.969,5.613-3.937Zm-.355-.355c-.035.023-.1,0-.145-.059s-.043-.125,0-.152.109-.008.145.051A.114.114,0,0,1,5.258-4.293ZM5-4.672c-.035.035-.094.016-.137-.023s-.051-.109-.016-.137.094-.016.137.023S5.039-4.7,5-4.672Zm-.262-.289a.074.074,0,0,1-.109.016c-.051-.023-.074-.066-.059-.1a.092.092,0,0,1,.109-.016C4.734-5.035,4.758-4.992,4.742-4.961Z"
+                      transform="translate(0 16.25)"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="https://codepen.io/konstantindenerz" target="_blank" rel="noopener" aria-label="Visit my CodePen profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                <path d="M19.621-11.262,10.48-17.355a.868.868,0,0,0-.96,0L.379-11.262A.874.874,0,0,0,0-10.547v6.094a.874.874,0,0,0,.379.714L9.52,2.355a.868.868,0,0,0,.96,0l9.141-6.095A.874.874,0,0,0,20-4.454v-6.094a.874.874,0,0,0-.38-.714Zm-8.761-3.772,6.73,4.487-3,2.009-3.728-2.489Zm-1.719,0v4.007L5.413-8.538l-3-2.009ZM1.719-8.94,3.873-7.5,1.719-6.061V-8.94ZM9.141.033,2.411-4.454l3-2.009L9.141-3.974ZM10-5.469,6.964-7.5,10-9.532,13.036-7.5Zm.859,5.5V-3.974l3.728-2.489,3,2.009Zm7.422-6.094L16.127-7.5l2.154-1.44v2.879Z" transform="translate(0 17.5)"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="https://www.youtube.com/@konstantindenerz" target="_blank" rel="noopener" aria-label="Visit my YouTube profile">
+            <svg width="86" height="60" viewBox="0 0 86 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M83.7812 9.53125C85.6562 16.0938 85.6562 30.1562 85.6562 30.1562C85.6562 30.1562 85.6562 44.0625 83.7812 50.7812C82.8438 54.5312 79.875 57.3438 76.2812 58.2812C69.5625 60 43 60 43 60C43 60 16.2812 60 9.5625 58.2812C5.96875 57.3438 3 54.5312 2.0625 50.7812C0.1875 44.0625 0.1875 30.1562 0.1875 30.1562C0.1875 30.1562 0.1875 16.0938 2.0625 9.53125C3 5.78125 5.96875 2.8125 9.5625 1.875C16.2812 0 43 0 43 0C43 0 69.5625 0 76.2812 1.875C79.875 2.8125 82.8438 5.78125 83.7812 9.53125ZM34.25 42.8125L56.4375 30.1562L34.25 17.5V42.8125Z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="https://mastodon.world/@konstantindenerz" target="_blank" rel="noopener" aria-label="Visit my Mastodon profile">
+            <svg width="67" height="73" viewBox="0 0 67 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M66.6562 25.125C66.6562 25.125 66.6562 36.2188 65.25 44.0312C64.1562 49.0312 56.5 54.3438 47.75 55.4375C44.625 55.75 33.2188 57.625 19.9375 54.3438C19.9375 55.125 19.9375 55.9062 19.9375 56.5312C21.0312 64.3438 27.75 64.8125 34 64.9688C40.4062 65.2812 46.0312 63.4062 46.0312 63.4062L46.3438 69.1875C46.3438 69.1875 41.8125 71.5312 34 72C29.625 72.3125 24.1562 71.8438 17.75 70.2812C0.25 65.5938 1.34375 43.0938 1.34375 25.125C1.34375 9.8125 11.1875 5.4375 11.1875 5.4375C20.875 1.0625 46.8125 0.90625 56.6562 5.4375C56.6562 5.4375 66.6562 9.8125 66.6562 25.125ZM54.7812 44.6562C54.7812 25.5938 55.7188 21.5312 51.9688 17.3125C47.9062 12.7812 39.4688 12.4688 35.7188 18.25L34 21.2188L32.125 18.25C28.375 12.4688 19.9375 12.7812 15.875 17.3125C12.125 21.5312 13.0625 25.5938 13.0625 44.6562H20.25V26.8438C20.25 19.0312 30.25 18.7188 30.25 27.7812V37.625H37.5938V27.9375C37.5938 18.7188 47.5938 19.0312 47.5938 26.8438V44.6562H54.7812Z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="mailto:konstantin.denerz+hello-friend@gmail.com" target="_blank" rel="noopener" aria-label="Send me an email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="17.5" viewBox="0 0 17.5 17.5">
+                <path d="M15.625-16.25H1.875A1.875,1.875,0,0,0,0-14.375V-.625A1.875,1.875,0,0,0,1.875,1.25h13.75A1.875,1.875,0,0,0,17.5-.625v-13.75A1.875,1.875,0,0,0,15.625-16.25ZM6.958-7.262C3.415-9.833,3.451-9.839,2.5-10.579v-.983a.937.937,0,0,1,.937-.937H14.062a.937.937,0,0,1,.937.937v.983c-.952.741-.915.747-4.458,3.318-.41.3-1.226,1.02-1.792,1.011C8.183-6.242,7.368-6.962,6.958-7.262ZM15-8.993v5.556a.937.937,0,0,1-.937.937H3.437A.937.937,0,0,1,2.5-3.437V-8.993c.545.422,1.3.986,3.723,2.743A4.625,4.625,0,0,0,8.75-5a4.633,4.633,0,0,0,2.528-1.251C13.7-8.007,14.455-8.572,15-8.993Z"
+                      transform="translate(0 16.25)"/>
+            </svg>
+        </a>
+    </div>
+    <div class="labs-ripple labs-ripple-center">
+        <a href="/index.xml" target="_blank" rel="noopener" aria-label="Subscribe to RSS feed">
+            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+                <g id="Group_1" data-name="Group 1" transform="translate(-673 -356)">
+                    <rect id="Rectangle_1" data-name="Rectangle 1" width="26" height="26" rx="13" transform="translate(673 356)" fill="red" opacity="0"/>
+                    <path id="Path_2" data-name="Path 2" d="M17.5,1.25A17.5,17.5,0,0,0,0-16.25v2.5a15,15,0,0,1,15,15ZM0-11.25v2.5a10,10,0,0,1,10,10h2.5A12.5,12.5,0,0,0,0-11.25Zm5,10a2.5,2.5,0,0,0-2.5-2.5A2.5,2.5,0,0,0,0-1.25a2.5,2.5,0,0,0,2.5,2.5A2.5,2.5,0,0,0,5-1.25Z" transform="translate(677 376)"/>
+                </g>
+            </svg>
+        </a>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="static-links">
+        <a class="static-link imprint labs-ripple" href="/legal-disclosure" aria-label="Legal Disclosure">Legal Disclosure</a>
+        <a class="static-link policy labs-ripple" href="/privacy-policy" aria-label="Privacy Policy">Privacy Policy</a>
+    </div>
+    <div class="copyright">© 2023 Konstantin Denerz. All rights reserved.</div>
+</div><textarea id="clipboard-input" class="visually-hidden" aria-hidden="true" tabindex="-1"></textarea>
+        <div id="labs-snackbar"></div>
+    </body>
+</html>
+

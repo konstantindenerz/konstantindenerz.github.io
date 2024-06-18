@@ -6,7 +6,17 @@
         <description>Recent content on Konstantin Denerz</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 23 Apr 2023 10:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate>Tue, 18 Jun 2024 20:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Angular Material 3 Theming: Design Tokens and System Variablespost</title>
+            <link>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</link>
+            <pubDate>Tue, 18 Jun 2024 20:00:00 +0100</pubDate>
+            
+            <guid>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</guid>
+            <description>If you work with Angular and don&amp;rsquo;t want to or can&amp;rsquo;t develop every single component yourself, you use a framework like Angular Material. One of the great things about the framework is that it is based on a modern design system, Google&amp;rsquo;s Material version 3, and supports design tokens. This provides every product/project team with a common foundation that Product Owners, designers, customers, and developers can work on together.
+In this article, I describe how to implement a Material 3 theme using the Angular Material framework.</description>
+        </item>
+        
         <item>
             <title>View Transitions with Angular (SPA)post</title>
             <link>https://konstantin-denerz.com/view-transitions-with-angular-spa/</link>
