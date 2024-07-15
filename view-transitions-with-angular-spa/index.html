@@ -61,7 +61,7 @@
     
     <script type="text/javascript" src="/main.min.31d6eee507fca3bb91129c0004e8cb4eae065edec6a45541327fb3bdc7755a4f.js" defer></script>
     
-    <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.7d3fcbf1cc76c3f86d221b76750ce7db57e2ef78d44ba9e49c01373ecf3b5632.css">
+    <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.38ce754ea532e79d094f3c4b096950e6785509e928454615d657ac41193d8c90.css">
     
     
     <title>Konstantin Denerz | View Transitions with Angular (SPA)</title>
@@ -231,8 +231,8 @@ Without this animation, users may need more time to understand the switch betwee
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS transitions</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS animations</a>,
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API">Web Animation API</a>, <a href="https://angular.io/guide/animations">Angular animations</a> and <a href="https://angular.io/guide/route-animations">route transition animations</a> provides great APIs to implement different navigation transitions.
 In some cases this works perfect, but in some cases this results in complex animation definitions and complex DOM structure.
-For these cases we can use the new <code>View Transitions API ✨</code> to simplify the animations.</p>
-<h2 id="how-view-transitions-api-works">How View Transitions API works</h2>
+For these cases we can use the new <code>View Transition API ✨</code> to simplify the animations.</p>
+<h2 id="how-view-transition-api-works">How View Transition API works</h2>
 <h3 id="idea-">Idea 💡</h3>
 <p>The focus in this article is on the animations of views <em>while navigating between pages</em> (routes).
 There are other types of animation that I may describe in another article.
@@ -339,11 +339,11 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">appConfig</span><span class="o">:</span> <span class="nx">ApplicationConfig</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">provideRouter</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="nx">withViewTransitions</span><span class="p">())],</span>
 </span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p><del>The view transitions API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
+</span></span></code></pre></div><p><del>The View Transition API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
 I forked the Angular repo and <a href="https://github.com/konstantindenerz/angular/commit/8ea4d971801e2e144ad46c3d9514360f0abf1526#diff-03cb1ea13f0b5890eb24ce6fef7a42eed85429da0a90cdb48ab06b58c30cb1c1R741-R766">changed the router</a> to demonstrate the view transitions in my demo application.
 💡 I think the router is responsible for the invocation of the startViewTransition method during router navigation.</del></p>
 <h3 id="workaround">Workaround</h3>
-<p>You can try the view transitions API without changing Angular framework.</p>
+<p>You can try the View Transition API without changing Angular framework.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// list.component.ts
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="kr">private</span> <span class="nx">readonly</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">inject</span><span class="o">&lt;</span><span class="nx">Document</span> <span class="o">&amp;</span> <span class="p">{</span><span class="nx">startViewTransition</span><span class="o">:</span> <span class="p">(</span><span class="nx">callback</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{}}</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">DOCUMENT</span><span class="p">);</span>
