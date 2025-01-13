@@ -5,16 +5,37 @@
         <link>https://konstantin-denerz.com/</link>
         <description>Recent content on Konstantin Denerz</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Tue, 18 Jun 2024 20:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
+        <language>en</language>
+        <lastBuildDate>Mon, 13 Jan 2025 11:11:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+            <title>Quickstart: Angular 19 Testing with Jest and Neovimpost</title>
+            <link>https://konstantin-denerz.com/quickstart-angular-19-testing-with-jest-and-neovim/</link>
+            <pubDate>Mon, 13 Jan 2025 11:11:00 +0100</pubDate>
+            
+            <guid>https://konstantin-denerz.com/quickstart-angular-19-testing-with-jest-and-neovim/</guid>
+            <description>&lt;p&gt;Looking to simplify testing in your &lt;a href=&#34;https://angular.io&#34;&gt;Angular&lt;/a&gt; 19 monorepo and integrate it with &lt;a href=&#34;https://neovim.io&#34;&gt;Neovim&lt;/a&gt;? This guide will show you how to set up &lt;a href=&#34;https://jestjs.io&#34;&gt;Jest&lt;/a&gt;, configure Angular for Jest, and use &lt;a href=&#34;https://github.com/nvim-neotest/neotest&#34;&gt;Neotest&lt;/a&gt; with the &lt;a href=&#34;https://github.com/haydenmeade/neotest-jest&#34;&gt;neotest-jest adapter&lt;/a&gt; to run tests directly in your editor.&lt;/p&gt;
+&lt;h2 id=&#34;demo--source-code&#34;&gt;Demo &amp;amp; Source Code&lt;/h2&gt;
+
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/bgFl-oWfmYo?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Here is the source code for the sample app used in this guide: &lt;a href=&#34;https://github.com/konstantindenerz/article-angular-jest-neovim-setup&#34;&gt;GitHub Repo&lt;/a&gt;.&lt;/p&gt;</description>
+        </item>
+        
         <item>
             <title>Angular Material 3 Theming: Design Tokens and System Variablespost</title>
             <link>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</link>
             <pubDate>Tue, 18 Jun 2024 20:00:00 +0100</pubDate>
             
             <guid>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</guid>
-            <description>If you work with Angular and don&amp;rsquo;t want to or can&amp;rsquo;t develop every single component yourself, you use a framework like Angular Material. One of the great things about the framework is that it is based on a modern design system, Google&amp;rsquo;s Material version 3, and supports design tokens. This provides every product/project team with a common foundation that Product Owners, designers, customers, and developers can work on together.
-In this article, I describe how to implement a Material 3 theme using the Angular Material framework.</description>
+            <description>&lt;p&gt;If you work with &lt;a href=&#34;https://angular.dev/&#34;&gt;Angular&lt;/a&gt; and don&amp;rsquo;t want to or can&amp;rsquo;t develop every single component yourself,
+you use a framework like &lt;a href=&#34;https://material.angular.io/&#34;&gt;Angular Material&lt;/a&gt;.
+One of the great things about the framework is that it is based on a modern design
+system, &lt;a href=&#34;https://m3.material.io/&#34;&gt;Google&amp;rsquo;s Material&lt;/a&gt; version 3, and supports &lt;strong&gt;design tokens&lt;/strong&gt;.
+This provides every product/project team with a common foundation that Product Owners, designers, customers, and
+developers can work on together.&lt;/p&gt;
+&lt;p&gt;In this article, I describe how to implement a Material 3 theme using the Angular Material framework.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -23,8 +44,24 @@ In this article, I describe how to implement a Material 3 theme using the Angula
             <pubDate>Sun, 23 Apr 2023 10:00:00 +0100</pubDate>
             
             <guid>https://konstantin-denerz.com/view-transitions-with-angular-spa/</guid>
-            <description>View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback.
-Update [2023-09-12] Angular router now supports View Transitions. (#73e4bf2) Use Case The use case in this article is a single page application built with Angular to demonstrate a portfolio of a user. As in most customer projects, I also set up and use a design system here.</description>
+            <description>&lt;p&gt;&lt;strong&gt;View transitions&lt;/strong&gt; is a cool and powerful API we can use in our Angular application to create animated transitions between views to
+elevating the overall user experience and enhancing usability, resulting in positive user feedback.&lt;/p&gt;
+&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+  
+&lt;figure class=&#34;highlight&#34;&gt;
+  &lt;figcaption&gt;
+    &lt;span class=&#34;icon&#34;&gt;
+      &lt;i class=&#34;devicon-powershell-plain&#34; title=&#34;sh&#34;&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/figcaption&gt;
+  &lt;pre
+    tabindex=&#34;0&#34;
+    class=&#34;chroma&#34;
+  &gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2023-09-12&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Angular router now supports View Transitions. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#73e4bf2)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;
+&lt;p&gt;The use case in this article is a single page application built with &lt;a href=&#34;https://angular.io/&#34;&gt;Angular&lt;/a&gt; to demonstrate a portfolio of a user.
+As in most customer projects, I also set up and use a design system here. I took the 3rd version of the great &lt;a href=&#34;https://m3.material.io/&#34;&gt;Google&amp;rsquo;s Material Design&lt;/a&gt;.&lt;/p&gt;</description>
         </item>
         
         <item>
@@ -33,7 +70,9 @@ Update [2023-09-12] Angular router now supports View Transitions. (#73e4bf2) Use
             <pubDate>Sun, 12 Mar 2023 20:19:37 +0100</pubDate>
             
             <guid>https://konstantin-denerz.com/hello-friend/</guid>
-            <description>Hello and welcome to my blog! My name is Konstantin Denerz, and I&amp;rsquo;m a consultant, coach, and developer with over 20 years of experience in development on platforms like .NET, Java, and web. During this time, I have gained extensive experience in various technologies, frameworks, and tools. My current focus is on Angular and UX/UI design, and I&amp;rsquo;m passionate about sharing technical knowledge with others. Find more about me on the about me page.</description>
+            <description>&lt;p&gt;Hello and welcome to my blog! My name is Konstantin Denerz, and I&amp;rsquo;m a consultant, coach, and developer with over 20 years of experience in development on platforms like .NET, Java, and web.
+During this time, I have gained extensive experience in various technologies, frameworks, and tools.
+My current focus is on Angular and UX/UI design, and I&amp;rsquo;m passionate about sharing technical knowledge with others. Find more about me on the &lt;a href=&#34;https://konstantin-denerz.com/about/&#34;&gt;about me&lt;/a&gt; page.&lt;/p&gt;</description>
         </item>
         
     </channel>

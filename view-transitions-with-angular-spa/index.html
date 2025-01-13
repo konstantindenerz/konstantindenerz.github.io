@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  />
+  <meta
+    name="description"
+    content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications."
+  />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta
+    http-equiv="Cache-control"
+    content="no-cache, no-store, must-revalidate"
+  />
+  <meta http-equiv="Pragma" content="no-cache" />
     
-    
-    
-    <meta name="twitter:image" content="https://konstantin-denerz.com/images/vt/cover-view-transitions-social.69b575f0a4487063d878101c0e44be37d860acdfe87f9febb68b41b0ecceb8b0.webp">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title"
-          content="View Transitions with Angular (SPA) &middot; Konstantin Denerz">
-    <meta name="twitter:description"
-          content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications.">
-    <meta name="twitter:site" content="@kdenerz">
-    <meta name="twitter:creator" content="@kdenerz">
+  <meta name="twitter:image" content="https://konstantin-denerz.com/images/vt/cover-view-transitions-social.69b575f0a4487063d878101c0e44be37d860acdfe87f9febb68b41b0ecceb8b0.webp" />
+  
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+  <meta
+    name="twitter:title"
+    content="View Transitions with Angular (SPA) &middot; Konstantin Denerz"
+  />
+  <meta
+    name="twitter:description"
+    content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications."
+  />
+  <meta name="twitter:site" content="@kdenerz" />
+  <meta name="twitter:creator" content="@kdenerz" />
 
-    
+  
 
+  <meta
+    property="og:title"
+    content="View Transitions with Angular (SPA) &middot; Konstantin Denerz"
+  />
 
-    <meta property="og:title" content="View Transitions with Angular (SPA) &middot; Konstantin Denerz">
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="article:published_time" content="2023-04-23" />
+  
+  <meta property="og:url" content="https://konstantin-denerz.com/view-transitions-with-angular-spa/" />
+  <meta property="og:site_name" content="Konstantin Denerz" />
+  
+  <meta property="og:tags" content="angular" />
+  
+  <meta property="og:tags" content="animations" />
+  
+  <meta property="og:tags" content="viewtransitions" />
+  
+  <meta property="og:tags" content="css" />
+    
+  <meta property="og:image" content="https://konstantin-denerz.com/images/vt/cover-view-transitions-social.69b575f0a4487063d878101c0e44be37d860acdfe87f9febb68b41b0ecceb8b0.webp" />
+  
 
-    
-    <meta property="og:type" content="article">
-    
-    <meta property="article:published_time" content="2023-04-23">
-    
-    <meta property="og:url" content="https://konstantin-denerz.com/view-transitions-with-angular-spa/">
-    <meta property="og:site_name" content="Konstantin Denerz">
-    
-    <meta property="og:tags" content="angular">
-    
-    <meta property="og:tags" content="animations">
-    
-    <meta property="og:tags" content="viewtransitions">
-    
-    <meta property="og:tags" content="css">
-    
+  <meta
+    property="og:description"
+    content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications."
+  />
 
-    
-    
-    <meta property="og:image" content="https://konstantin-denerz.com/images/vt/cover-view-transitions-social.69b575f0a4487063d878101c0e44be37d860acdfe87f9febb68b41b0ecceb8b0.webp">
-    
+   
+  <script type="text/javascript" src="/main.min.032f636299ed77b2ba066570a09fbbf7840371c5d4e23ffaaba629490301b437.js" defer></script>
+  
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.e151ec6c4b30878c68ed7077df1adbef40d12d7039e9218112d94c03293f12d2.css" />
+   
 
-    <meta property="og:description"
-          content="View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback. I show you how to create some cool animations and how to use it now in Angular applications.">
-
-    
-
-    
-    <script type="text/javascript" src="/main.min.31d6eee507fca3bb91129c0004e8cb4eae065edec6a45541327fb3bdc7755a4f.js" defer></script>
-    
-    <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.68efe61af90ba1a868830a3fc9c82804bf5bf296137d3178d97da97ec0f175b7.css">
-    
-    
-    <title>Konstantin Denerz | View Transitions with Angular (SPA)</title>
+  
+  
+  
+  
+  
+  
+  <title>Konstantin Denerz | View Transitions with Angular (SPA)</title>
 </head>
 <body>
 
@@ -198,8 +217,19 @@
 <p><strong>View transitions</strong> is a cool and powerful API we can use in our Angular application to create animated transitions between views to
 elevating the overall user experience and enhancing usability, resulting in positive user feedback.</p>
 <h2 id="update">Update</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>2023-09-12<span class="o">]</span> Angular router now supports View Transitions. <span class="o">(</span><span class="c1">#73e4bf2)</span>
-</span></span></code></pre></div><h2 id="use-case">Use Case</h2>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-powershell-plain" title="sh"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="o">[</span>2023-09-12<span class="o">]</span> Angular router now supports View Transitions. <span class="o">(</span><span class="c1">#73e4bf2)</span></span></span></code></pre>
+</figure>
+<h2 id="use-case">Use Case</h2>
 <p>The use case in this article is a single page application built with <a href="https://angular.io/">Angular</a> to demonstrate a portfolio of a user.
 As in most customer projects, I also set up and use a design system here. I took the 3rd version of the great <a href="https://m3.material.io/">Google&rsquo;s Material Design</a>.</p>
 <p>The routing is configured so that I have 3 routes:</p>
@@ -210,9 +240,9 @@ As in most customer projects, I also set up and use a design system here. I took
 </ul>
 <p>I created 8 view transitions during (router) navigation to animate the state change with CSS.</p>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/5XogC7gFbSg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5XogC7gFbSg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h3 id="live-demo">Live Demo</h3>
 <p>The deployed <a href="https://konstantin-denerz.com/labs-angular-view-transition-demo">demo application</a> showed in the video above currently only works with the latest Chromium browser, because it is a new API.
@@ -264,7 +294,17 @@ the <code>preview</code> and the <code>root</code> (everything except preview).<
 <h3 id="api">API</h3>
 <p>Let&rsquo;s take a look at the API and use pseudo code to simplify the case.</p>
 <p>Pseudo code to demonstrate an old state (<code>::view-transition-old</code>) on the <code>list</code> route:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span> <span class="c">&lt;!-- root --&gt;</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-html5-plain" title="html"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span> <span class="c">&lt;!-- root --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">list-page</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">list</span><span class="p">&gt;</span>
@@ -275,22 +315,45 @@ the <code>preview</code> and the <code>root</code> (everything except preview).<
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">list</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">list-page</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>Pseudo code to demonstrate the new state (<code>::view-transition-new</code>) on the <code>detail</code> route:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span> <span class="c">&lt;!-- root --&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre>
+</figure>
+<p>Pseudo code to demonstrate the new state (<code>::view-transition-new</code>) on the <code>detail</code> route:</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-html5-plain" title="html"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span> <span class="c">&lt;!-- root --&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">detail-page</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">preview</span><span class="p">&gt;&lt;/</span><span class="nt">preview</span><span class="p">&gt;</span> <span class="c">&lt;!-- preview --&gt;</span>
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">detail-page</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</span></span></code></pre></div><p>The browser needs information about the element we like to use for our transition.
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span></span></span></code></pre>
+</figure>
+<p>The browser needs information about the element we like to use for our transition.
 We can use CSS to assign a view transition name to an element. The name is the identifier and must be unique.</p>
 <p>Definition of the view transition in CSS:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">preview</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-css3-plain" title="css"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">preview</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="n">view-transition-name</span><span class="p">:</span> <span class="s1">&#39;preview&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p><code>root</code> is the view transition name for the root element (whole page).
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p><code>root</code> is the view transition name for the root element (whole page).
 A definition is not necessary, it&rsquo;s a part of user agent stylesheet.
 The <code>view-transition-name</code> must be unique on a page otherwise the animation is ignored.</p>
 <p>Let&rsquo;s assume we&rsquo;re on the <code>list</code> route, we can run this code to run the transition:</p>
@@ -320,7 +383,17 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
 </ul>
 <p>Without further CSS definition the browser uses the cross-fade as a default animation.</p>
 <p>In these steps, a <code>pseudo element tree</code> structure like this is created:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">::view-transition
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-powershell-plain" title="sh"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">::view-transition
 </span></span><span class="line"><span class="cl">├─ ::view-transition-group<span class="o">(</span>root<span class="o">)</span>
 </span></span><span class="line"><span class="cl">│ └─ ::view-transition-image-pair<span class="o">(</span>root<span class="o">)</span>
 </span></span><span class="line"><span class="cl">│     ├─ ::view-transition-old<span class="o">(</span>root<span class="o">)</span>
@@ -328,23 +401,45 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
 </span></span><span class="line"><span class="cl">└─ ::view-transition-group<span class="o">(</span>preview<span class="o">)</span>
 </span></span><span class="line"><span class="cl">  └─ ::view-transition-image-pair<span class="o">(</span>preview<span class="o">)</span>
 </span></span><span class="line"><span class="cl">      ├─ ::view-transition-old<span class="o">(</span>preview<span class="o">)</span>
-</span></span><span class="line"><span class="cl">      └─ ::view-transition-new<span class="o">(</span>preview<span class="o">)</span>
-</span></span></code></pre></div><p>Now we can use CSS to make interesting transitions and apply the style to pseudo elements.</p>
+</span></span><span class="line"><span class="cl">      └─ ::view-transition-new<span class="o">(</span>preview<span class="o">)</span></span></span></code></pre>
+</figure>
+<p>Now we can use CSS to make interesting transitions and apply the style to pseudo elements.</p>
 <h2 id="angular--view-transitions">Angular &amp; View Transitions</h2>
 <p>Angular will support view transitions in the next release. It&rsquo;s already <a href="https://github.com/angular/angular/commit/73e4bf2ed2471faf44a49b591e19a390d5867449">merged</a>.</p>
 <p>Just add <code>withViewTransitions()</code> to router features array to enable view transitions. ✨</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// app.config.ts
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-javascript-plain" title="js"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// app.config.ts
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">provideRouter</span><span class="p">,</span> <span class="nx">withViewTransitions</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">appConfig</span><span class="o">:</span> <span class="nx">ApplicationConfig</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">provideRouter</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="nx">withViewTransitions</span><span class="p">())],</span>
-</span></span><span class="line"><span class="cl"><span class="p">};</span>
-</span></span></code></pre></div><p><del>The View Transition API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
+</span></span><span class="line"><span class="cl"><span class="p">};</span></span></span></code></pre>
+</figure>
+<p><del>The View Transition API is new and there no support in Angular, but there is an <a href="https://github.com/angular/angular/issues/49401">issue #49401</a> to address that.
 I forked the Angular repo and <a href="https://github.com/konstantindenerz/angular/commit/8ea4d971801e2e144ad46c3d9514360f0abf1526#diff-03cb1ea13f0b5890eb24ce6fef7a42eed85429da0a90cdb48ab06b58c30cb1c1R741-R766">changed the router</a> to demonstrate the view transitions in my demo application.
 💡 I think the router is responsible for the invocation of the startViewTransition method during router navigation.</del></p>
 <h3 id="workaround">Workaround</h3>
 <p>You can try the View Transition API without changing Angular framework.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// list.component.ts
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-javascript-plain" title="js"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// list.component.ts
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="kr">private</span> <span class="nx">readonly</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">inject</span><span class="o">&lt;</span><span class="nx">Document</span> <span class="o">&amp;</span> <span class="p">{</span><span class="nx">startViewTransition</span><span class="o">:</span> <span class="p">(</span><span class="nx">callback</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{}}</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">DOCUMENT</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
@@ -356,20 +451,32 @@ I forked the Angular repo and <a href="https://github.com/konstantindenerz/angul
 </span></span><span class="line"><span class="cl">            <span class="p">});</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span>
 </span></span><span class="line"><span class="cl">    <span class="p">});</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="animation-implementation">Animation Implementation</h3>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<h3 id="animation-implementation">Animation Implementation</h3>
 <p>Usually we define the animations in the components style to animate the HTML element inside the components.
 In case of view transition, we want to apply animation style to the new <code>pseudo element tree</code>.
 For this reason I have defined the style globally and stored it in different style files.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">src/styles/view-transitions
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-powershell-plain" title="sh"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">src/styles/view-transitions
 </span></span><span class="line"><span class="cl">├─ app.component.transitions.scss
 </span></span><span class="line"><span class="cl">├─ app-bar.component.transitions.scss
 </span></span><span class="line"><span class="cl">├─ detail.component.transitions.scss
 </span></span><span class="line"><span class="cl">├─ editor.component.transitions.scss
 </span></span><span class="line"><span class="cl">├─ project-card.component.transitions.scss
 </span></span><span class="line"><span class="cl">├─ project-card.component.transitions.scss
-</span></span><span class="line"><span class="cl">└─ view-transitions.scss // index file
-</span></span></code></pre></div><h4 id="expand--collapse-animation">Expand / Collapse Animation</h4>
+</span></span><span class="line"><span class="cl">└─ view-transitions.scss // index file</span></span></code></pre>
+</figure>
+<h4 id="expand--collapse-animation">Expand / Collapse Animation</h4>
 
 
 
@@ -571,13 +678,24 @@ Both routes includes the <code>back-button</code>.</p>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <p>The animation can be easily implemented with the clip-path feature.
 The definition of <code>view-transition-name: detail-page</code> should be activated when you click the back button.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// detail.component.ts 
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-typescript-plain" title="ts"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// detail.component.ts 
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nx">navigateBack() {</span>
 </span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;full-page-transition&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">navigate</span><span class="p">([...]);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h4 id="special-close-animation-">Special Close Animation 🚀</h4>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<h4 id="special-close-animation-">Special Close Animation 🚀</h4>
 <p>So far, a few simple standard animations had been implemented, time for something special!
 The CodePen below shows a full page transition. The USS Enterprise (NCC 1701) moves with warp 9 between views. ✨
 This animation could be an alternative to the close animation.</p>
@@ -622,7 +740,17 @@ src="//codepen.io/assets/embed/ei.js"
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <p>The basic idea is to use the old element (screenshot) and mask it with 3 images.
 Mask-position and transform properties are changed during CSS animation:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">//</span> <span class="nt">app-bar</span><span class="p">.</span><span class="nc">component</span><span class="p">.</span><span class="nc">transitions</span><span class="p">.</span><span class="nc">scss</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-css3-plain" title="css"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="o">//</span> <span class="nt">app-bar</span><span class="p">.</span><span class="nc">component</span><span class="p">.</span><span class="nc">transitions</span><span class="p">.</span><span class="nc">scss</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">hide-view-landscape</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">from</span> <span class="p">{</span>
@@ -645,23 +773,45 @@ Mask-position and transform properties are changed during CSS animation:</p>
 </span></span><span class="line"><span class="cl">    <span class="k">mask-position</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span> <span class="mi">-80</span><span class="kt">%</span><span class="p">,</span> <span class="mi">50</span><span class="kt">%</span> <span class="mi">140</span><span class="kt">%</span><span class="p">,</span> <span class="mi">50</span><span class="kt">%</span> <span class="mi">-70</span><span class="kt">%</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="k">transform</span><span class="p">:</span> <span class="nb">scale</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="nb">translateY</span><span class="p">(</span><span class="mi">-10</span><span class="kt">%</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>Don&rsquo;t forget the view transition name:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.scss
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>Don&rsquo;t forget the view transition name:</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nd">:host</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nc">.special</span> <span class="k">&amp;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="na">view-transition-name</span><span class="o">:</span> <span class="n">special</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>  
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="reduce-motion">Reduce-Motion</h2>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<h2 id="reduce-motion">Reduce-Motion</h2>
 <p>I recommend to handle <a href="https://www.w3.org/WAI/WCAG21/Techniques/css/C39">reduce motion</a> when implementing animations.</p>
 <h2 id="debugging">Debugging</h2>
 <p>Debugging is easy because we can use the <a href="https://developer.chrome.com/docs/devtools/css/animations/">browser&rsquo;s dev tools</a> to debug animations and the pseudo-element tree.</p>
 <h2 id="findings--issues">Findings / Issues</h2>
 <h3 id="infinite-loop">Infinite Loop</h3>
 <p>You should avoid <code>infinite</code> animations 🤣.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">::</span><span class="nd">view-transition-new</span><span class="o">(</span><span class="nt">root</span><span class="o">)</span> <span class="p">{</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-css3-plain" title="css"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">::</span><span class="nd">view-transition-new</span><span class="o">(</span><span class="nt">root</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="k">animation</span><span class="p">:</span> <span class="kc">infinite</span><span class="o">-</span><span class="n">loop</span> <span class="mi">1</span><span class="kt">s</span> <span class="kc">linear</span> <span class="kc">infinite</span><span class="p">;</span> <span class="err">//</span> <span class="err">Don&#39;t</span> <span class="err">use</span> <span class="err">infinite</span> <span class="err">😱</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
@@ -673,15 +823,27 @@ Mask-position and transform properties are changed during CSS animation:</p>
 </span></span><span class="line"><span class="cl">  <span class="nt">to</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">filter</span><span class="p">:</span> <span class="nb">blur</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="pseudo-element-tree-is-preserved-after-multiple-reloads"><del>Pseudo-Element tree is preserved after multiple reloads</del></h3>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<h3 id="pseudo-element-tree-is-preserved-after-multiple-reloads"><del>Pseudo-Element tree is preserved after multiple reloads</del></h3>
 <p><del>[CLOSED] <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1434757">https://bugs.chromium.org/p/chromium/issues/detail?id=1434757</a></del></p>
 <p><del>I created a temporary workaround to fix this issue during initial load / bootstrap of the Angular application:</del></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-typescript-plain" title="ts"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nx">setTimeout</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">bootstrapApplication</span><span class="p">(</span><span class="nx">AppComponent</span><span class="p">,</span> <span class="nx">appConfig</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">        <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="nx">err</span><span class="p">));</span>
-</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">10</span><span class="p">);</span>
-</span></span></code></pre></div><h3 id="view-transitions-with-iframes">View Transitions with iFrames</h3>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="mi">10</span><span class="p">);</span></span></span></code></pre>
+</figure>
+<h3 id="view-transitions-with-iframes">View Transitions with iFrames</h3>
 <p>In my case I use recorded videos to preview the projects.
 An alternative used by cool dev sites is the iframe.
 It allows you to preview a demo page with real code.

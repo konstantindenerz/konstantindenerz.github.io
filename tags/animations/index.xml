@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>animations on Konstantin Denerz</title>
+    <title>Animations on Konstantin Denerz</title>
     <link>https://konstantin-denerz.com/tags/animations/</link>
-    <description>Recent content in animations on Konstantin Denerz</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 23 Apr 2023 10:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/tags/animations/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Animations on Konstantin Denerz</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Apr 2023 10:00:00 +0100</lastBuildDate>
+    <atom:link href="https://konstantin-denerz.com/tags/animations/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>View Transitions with Angular (SPA)</title>
       <link>https://konstantin-denerz.com/view-transitions-with-angular-spa/</link>
       <pubDate>Sun, 23 Apr 2023 10:00:00 +0100</pubDate>
-      
       <guid>https://konstantin-denerz.com/view-transitions-with-angular-spa/</guid>
-      <description>View transitions is a cool and powerful API we can use in our Angular application to create animated transitions between views to elevating the overall user experience and enhancing usability, resulting in positive user feedback.
-Update [2023-09-12] Angular router now supports View Transitions. (#73e4bf2) Use Case The use case in this article is a single page application built with Angular to demonstrate a portfolio of a user. As in most customer projects, I also set up and use a design system here.</description>
+      <description>&lt;p&gt;&lt;strong&gt;View transitions&lt;/strong&gt; is a cool and powerful API we can use in our Angular application to create animated transitions between views to&#xA;elevating the overall user experience and enhancing usability, resulting in positive user feedback.&lt;/p&gt;&#xA;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;&#xA;  &#xA;&lt;figure class=&#34;highlight&#34;&gt;&#xA;  &lt;figcaption&gt;&#xA;    &lt;span class=&#34;icon&#34;&gt;&#xA;      &lt;i class=&#34;devicon-powershell-plain&#34; title=&#34;sh&#34;&gt;&lt;/i&gt;&#xA;    &lt;/span&gt;&#xA;  &lt;/figcaption&gt;&#xA;  &lt;pre&#xA;    tabindex=&#34;0&#34;&#xA;    class=&#34;chroma&#34;&#xA;  &gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;2023-09-12&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Angular router now supports View Transitions. &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#73e4bf2)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;/figure&gt;&#xA;&lt;h2 id=&#34;use-case&#34;&gt;Use Case&lt;/h2&gt;&#xA;&lt;p&gt;The use case in this article is a single page application built with &lt;a href=&#34;https://angular.io/&#34;&gt;Angular&lt;/a&gt; to demonstrate a portfolio of a user.&#xA;As in most customer projects, I also set up and use a design system here. I took the 3rd version of the great &lt;a href=&#34;https://m3.material.io/&#34;&gt;Google&amp;rsquo;s Material Design&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

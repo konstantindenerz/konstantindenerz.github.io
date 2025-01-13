@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>design system on Konstantin Denerz</title>
+    <title>Design System on Konstantin Denerz</title>
     <link>https://konstantin-denerz.com/tags/design-system/</link>
-    <description>Recent content in design system on Konstantin Denerz</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 18 Jun 2024 20:00:00 +0100</lastBuildDate><atom:link href="https://konstantin-denerz.com/tags/design-system/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Design System on Konstantin Denerz</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 18 Jun 2024 20:00:00 +0100</lastBuildDate>
+    <atom:link href="https://konstantin-denerz.com/tags/design-system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Angular Material 3 Theming: Design Tokens and System Variables</title>
       <link>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</link>
       <pubDate>Tue, 18 Jun 2024 20:00:00 +0100</pubDate>
-      
       <guid>https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/</guid>
-      <description>If you work with Angular and don&amp;rsquo;t want to or can&amp;rsquo;t develop every single component yourself, you use a framework like Angular Material. One of the great things about the framework is that it is based on a modern design system, Google&amp;rsquo;s Material version 3, and supports design tokens. This provides every product/project team with a common foundation that Product Owners, designers, customers, and developers can work on together.
-In this article, I describe how to implement a Material 3 theme using the Angular Material framework.</description>
+      <description>&lt;p&gt;If you work with &lt;a href=&#34;https://angular.dev/&#34;&gt;Angular&lt;/a&gt; and don&amp;rsquo;t want to or can&amp;rsquo;t develop every single component yourself,&#xA;you use a framework like &lt;a href=&#34;https://material.angular.io/&#34;&gt;Angular Material&lt;/a&gt;.&#xA;One of the great things about the framework is that it is based on a modern design&#xA;system, &lt;a href=&#34;https://m3.material.io/&#34;&gt;Google&amp;rsquo;s Material&lt;/a&gt; version 3, and supports &lt;strong&gt;design tokens&lt;/strong&gt;.&#xA;This provides every product/project team with a common foundation that Product Owners, designers, customers, and&#xA;developers can work on together.&lt;/p&gt;&#xA;&lt;p&gt;In this article, I describe how to implement a Material 3 theme using the Angular Material framework.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

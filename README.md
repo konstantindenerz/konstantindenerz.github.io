@@ -1,1 +1,0 @@
-# konstantindenerz.github.io

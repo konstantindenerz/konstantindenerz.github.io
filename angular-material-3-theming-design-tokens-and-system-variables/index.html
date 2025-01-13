@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="description" content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="theme-color" content="#ffffff">
-    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=no"
+  />
+  <meta
+    name="description"
+    content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material."
+  />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta
+    http-equiv="Cache-control"
+    content="no-cache, no-store, must-revalidate"
+  />
+  <meta http-equiv="Pragma" content="no-cache" />
     
-    
-    
-    <meta name="twitter:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title"
-          content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz">
-    <meta name="twitter:description"
-          content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
-    <meta name="twitter:site" content="@kdenerz">
-    <meta name="twitter:creator" content="@kdenerz">
+  <meta name="twitter:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp" />
+  
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+  <meta
+    name="twitter:title"
+    content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz"
+  />
+  <meta
+    name="twitter:description"
+    content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material."
+  />
+  <meta name="twitter:site" content="@kdenerz" />
+  <meta name="twitter:creator" content="@kdenerz" />
 
-    
+  
 
+  <meta
+    property="og:title"
+    content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz"
+  />
 
-    <meta property="og:title" content="Angular Material 3 Theming: Design Tokens and System Variables &middot; Konstantin Denerz">
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="article:published_time" content="2024-06-18" />
+  
+  <meta property="og:url" content="https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/" />
+  <meta property="og:site_name" content="Konstantin Denerz" />
+  
+  <meta property="og:tags" content="angular" />
+  
+  <meta property="og:tags" content="material" />
+  
+  <meta property="og:tags" content="design tokens" />
+  
+  <meta property="og:tags" content="design system" />
+    
+  <meta property="og:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp" />
+  
 
-    
-    <meta property="og:type" content="article">
-    
-    <meta property="article:published_time" content="2024-06-18">
-    
-    <meta property="og:url" content="https://konstantin-denerz.com/angular-material-3-theming-design-tokens-and-system-variables/">
-    <meta property="og:site_name" content="Konstantin Denerz">
-    
-    <meta property="og:tags" content="angular">
-    
-    <meta property="og:tags" content="material">
-    
-    <meta property="og:tags" content="design tokens">
-    
-    <meta property="og:tags" content="design system">
-    
+  <meta
+    property="og:description"
+    content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material."
+  />
 
-    
-    
-    <meta property="og:image" content="https://konstantin-denerz.com/images/ng-m3/cover-ng-m3-system-prefix-social.bef04b06ec45ca733df8767a1835b8c72133c44633666259fbdb78500fc3d26d.webp">
-    
+   
+  <script type="text/javascript" src="/main.min.032f636299ed77b2ba066570a09fbbf7840371c5d4e23ffaaba629490301b437.js" defer></script>
+  
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.e151ec6c4b30878c68ed7077df1adbef40d12d7039e9218112d94c03293f12d2.css" />
+   
 
-    <meta property="og:description"
-          content="If you work with Angular and use Angular Material, based on Google&amp;#39;s Material version 3 and supporting **design tokens**, you provide a collaborative foundation for your team. This article describes how to implement a Material 3 theme using Angular Material.">
-
-    
-
-    
-    <script type="text/javascript" src="/main.min.31d6eee507fca3bb91129c0004e8cb4eae065edec6a45541327fb3bdc7755a4f.js" defer></script>
-    
-    <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.68efe61af90ba1a868830a3fc9c82804bf5bf296137d3178d97da97ec0f175b7.css">
-    
-    
-    <title>Konstantin Denerz | Angular Material 3 Theming: Design Tokens and System Variables</title>
+  
+  
+  
+  
+  
+  
+  <title>Konstantin Denerz | Angular Material 3 Theming: Design Tokens and System Variables</title>
 </head>
 <body>
 
@@ -208,9 +227,9 @@ developers can work on together.</p>
 <li><a href="https://github.com/konstantindenerz/article-angular-material-3-system-tokens-theme">Source Code</a></li>
 </ul>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/arIsiU7gSJw" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/arIsiU7gSJw?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="what-are-design-tokens">What are Design Tokens?</h2>
 <p>Design tokens are essentially the building blocks of your design system.
@@ -251,15 +270,37 @@ should be resolved at the <strong>system level</strong>.</p>
 <h3 id="css-variables">CSS Variables</h3>
 <p>On the web, we implement design tokens using CSS variables.</p>
 <p>From the system token:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">md</span><span class="p">.</span><span class="nc">sys</span><span class="p">.</span><span class="nc">color</span><span class="p">.</span><span class="nc">primary-container</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="nt">md</span><span class="p">.</span><span class="nc">ref</span><span class="p">.</span><span class="nc">palette</span><span class="p">.</span><span class="nc">primary90</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="p">#</span><span class="nn">FFD7F0</span>
-</span></span></code></pre></div><p>we get the CSS variables:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-css3-plain" title="css"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">md</span><span class="p">.</span><span class="nc">sys</span><span class="p">.</span><span class="nc">color</span><span class="p">.</span><span class="nc">primary-container</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="nt">md</span><span class="p">.</span><span class="nc">ref</span><span class="p">.</span><span class="nc">palette</span><span class="p">.</span><span class="nc">primary90</span>  <span class="nt">--</span><span class="o">&gt;</span>  <span class="p">#</span><span class="nn">FFD7F0</span></span></span></code></pre>
+</figure>
+<p>we get the CSS variables:</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// reference token
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--md-ref-palette-primary90</span><span class="o">:</span> <span class="mh">#FFD7F0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// system token
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="na">--md-sys-color-primary-container</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-palette-primary90</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h3 id="transformation">Transformation</h3>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<h3 id="transformation">Transformation</h3>
 <p>Typically, design tokens are maintained in design tools like <a href="https://figma.com">Figma</a>
 or <a href="https://penpot.app/">Penpot</a>. From there, they are exported to JSON files in formats such as
 the <a href="https://www.w3.org/community/design-tokens/">Design Token Community Group</a> format.
@@ -278,8 +319,19 @@ app, here’s how you do it:</p>
 <li>Install Angular Material (in a mono repo):</li>
 </ol>
 <p>Use <code>@next</code> to get at least version <a href="https://github.com/angular/components/releases/tag/18.1.0-next.2">18.1.0-next.2</a>.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npx ng add @angular/material@next --project<span class="o">=</span>demo
-</span></span></code></pre></div><ol start="2">
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-powershell-plain" title="sh"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">npx ng add @angular/material@next --project<span class="o">=</span>demo</span></span></code></pre>
+</figure>
+<ol start="2">
 <li>Custom theme:
 During the setup, you’ll be prompted to choose a pre-built theme OR custom theme. For this example, select the &quot;
 Custom&quot; theme. The schematics generate styles where <code>mat.core</code>, <code>mat.define-theme</code>, and <code>mat.all-components-themes</code>
@@ -325,43 +377,17 @@ variables via a library, such as <code>@labs/design-tokens-web</code>, using <st
 default theme is generated. In lines #29-30, the CSS variables (design tokens) for the dark theme are activated on the
 root element. The new flag <code>use-system-variables: true</code> enables the theming API to use system tokens instead of
 hardcoded values.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="hl"><span class="lnt"> 9
-</span></span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="hl"><span class="lnt">12
-</span></span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@angular/material&#39;</span> <span class="k">as</span> <span class="nn">mat</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -392,10 +418,9 @@ hardcoded values.</p>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-colors</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-typographies</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>You can see the result in the next screenshot. Now, the component tokens reference the system tokens instead of holding
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>You can see the result in the next screenshot. Now, the component tokens reference the system tokens instead of holding
 hardcoded values.
 There are system tokens for both <em>colors</em> and <em>typography</em>. Counting the system tokens, we see that 141 system tokens
 are
@@ -432,22 +457,22 @@ we see that colors use the <code>md-sys-color</code> prefix and typography uses 
 Angular Material up to version 18.1.* only provides <code>sys</code> as a prefix.</p>
 <p>My token library would only provide system tokens with the following prefixes:</p>
 <table>
-<thead>
-<tr>
-<th>Category</th>
-<th>Prefix</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Color</td>
-<td><code>--md-sys-color</code></td>
-</tr>
-<tr>
-<td>Typography</td>
-<td><code>--md-sys-typescale</code></td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th>Category</th>
+          <th>Prefix</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Color</td>
+          <td><code>--md-sys-color</code></td>
+      </tr>
+      <tr>
+          <td>Typography</td>
+          <td><code>--md-sys-typescale</code></td>
+      </tr>
+  </tbody>
 </table>
 <h3 id="my-merged-pull-request-29139---system-variables-prefix-option">My Merged Pull Request #29139 - System Variables Prefix Option</h3>
 <p>
@@ -476,45 +501,17 @@ Angular Material up to version 18.1.* only provides <code>sys</code> as a prefix
 <p>This has been merged 🎉 and should be included in the minor release 18.1.*.</p>
 <h3 id="using-system-variables-prefix">Using System Variables Prefix</h3>
 <p>In the following code, you can see that I define the different prefixes in lines #10 and #14:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="hl"><span class="lnt">10
-</span></span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="hl"><span class="lnt">14
-</span></span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/demo/src/styles/themes.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@angular/material&#39;</span> <span class="k">as</span> <span class="nn">mat</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
@@ -547,10 +544,9 @@ Angular Material up to version 18.1.* only provides <code>sys</code> as a prefix
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-colors</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">all-component-typographies</span><span class="p">(</span><span class="nv">$dark-theme</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>The result looks like this 😍:</p>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>The result looks like this 😍:</p>
 <p>
 
 
@@ -580,10 +576,31 @@ In my repository, I have created a library under <code>projects/design-tokens-we
 It is better to publish the library, for example, under the name <code>@labs/design-tokens-web</code>.
 This can be installed with a specific version in the monorepo and would be located as version 1.0.0 under <code>node_modules/@labs/design-tokens-web</code>.</p>
 <p>In my demo app, I would simply include an Sass import like this:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@labs/design-tokens-web/theme&#39;</span><span class="p">;</span>
-</span></span></code></pre></div><p>The <code>theme.scss</code> file is an exported SCSS file from the token library that provides all reference and system tokens at the root level.</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;@labs/design-tokens-web/theme&#39;</span><span class="p">;</span></span></span></code></pre>
+</figure>
+<p>The <code>theme.scss</code> file is an exported SCSS file from the token library that provides all reference and system tokens at the root level.</p>
 <p>Here is an example:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/theme.scss
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/theme.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/ref-typeface&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">@use</span> <span class="s1">&#39;tokens/ref-colors&#39;</span><span class="p">;</span>
@@ -595,9 +612,20 @@ This can be installed with a specific version in the monorepo and would be locat
 </span></span><span class="line"><span class="cl">  <span class="na">background</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-surface</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-on-surface</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">font</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-body-large</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>The reference tokens for the colors are provided with hardcoded values directly on the root element:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/ref-colors.scss
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>The reference tokens for the colors are provided with hardcoded values directly on the root element:</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/ref-colors.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nd">:root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary0</span><span class="o">:</span> <span class="mh">#000000</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary10</span><span class="o">:</span> <span class="mh">#001b3c</span><span class="p">;</span>
@@ -606,9 +634,20 @@ This can be installed with a specific version in the monorepo and would be locat
 </span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary40</span><span class="o">:</span> <span class="mh">#245fa6</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--md-ref-primary-primary50</span><span class="o">:</span> <span class="mh">#4378c1</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span></code></pre></div><p>The mapping of the system tokens to the corresponding reference tokens is handled either through a media query or via the <code>.labs-theme-dark</code> CSS class.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-color-dark.scss
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>The mapping of the system tokens to the corresponding reference tokens is handled either through a media query or via the <code>.labs-theme-dark</code> CSS class.</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-color-dark.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="k">@mixin</span><span class="nf"> dark</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--md-sys-color-primary</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-primary-primary80</span><span class="p">);</span>
@@ -670,9 +709,20 @@ This can be installed with a specific version in the monorepo and would be locat
 </span></span><span class="line"><span class="cl">  <span class="nd">:root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="k">@include</span><span class="nd"> dark</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>And the same applies to the <a href="https://m3.material.io/styles/typography/type-scale-tokens">system tokens for typography</a>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-typescale.scss
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>And the same applies to the <a href="https://m3.material.io/styles/typography/type-scale-tokens">system tokens for typography</a>:</p>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/sys-typescale.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="nd">:root</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// typography: https://m3.material.io/styles/typography/type-scale-tokens
@@ -684,22 +734,45 @@ This can be installed with a specific version in the monorepo and would be locat
 </span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large-weight</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-ref-typeface-weight-regular</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--md-sys-typescale-display-large</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-weight</span><span class="p">)</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-size</span><span class="p">)</span> <span class="o">/</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-line-height</span><span class="p">)</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-typescale-display-large-font</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="c1">//  ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
-</span></span></code></pre></div><h4 id="override-component-tokens">Override Component Tokens</h4>
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span></span></span></code></pre>
+</figure>
+<h4 id="override-component-tokens">Override Component Tokens</h4>
 <p>Currently, not all values (design decisions) such as states, elevation, shape, and others are represented by system tokens. You can use component tokens like <code>--mdc-extended-fab-container-shape</code> to adapt the framework to your own design system or you can submit a <a href="https://github.com/angular/components/">PR@Angular Material</a> or a <a href="https://github.com/material-components/material-components-web">PR@Material Components</a>.</p>
 <p>In my example application, I have a FAB button that should have a tertiary style. I define this by mapping component tokens to the respective system tokens:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/comp-fab.scss
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-sass-plain" title="scss"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// projects/design-tokens-web/src/tokens/comp-fab.scss
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span>
 </span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">mat-fab</span><span class="o">][</span><span class="nt">tertiary</span><span class="o">]</span><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--mat-fab-foreground-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-on-tertiary-container</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="na">--mdc-fab-container-color</span><span class="o">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">md-sys-color-tertiary-container</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><p>I would store such styles in a dedicated Material token library, for example, <code>@labs/design-tokens-angular-material</code>.</p>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
+</figure>
+<p>I would store such styles in a dedicated Material token library, for example, <code>@labs/design-tokens-angular-material</code>.</p>
 <h2 id="conclusion">Conclusion</h2>
 <p>With Material 3 support in Angular Material, we have made a significant step forward. Extending to system tokens simplifies the mapping of component tokens to exported and transformed design tokens from custom design token libraries. My pull request in Angular Material goes a step further in harmonizing system tokens by offering support for Material 3 naming conventions.</p>
 <p>If you want to learn more about Angular, Material or Design Systems, follow me on my channels like <a href="https://x.com/kdenerz">X@kdenerz</a>, <a href="https://linkedin.com/in/konstantindenerz">LinkedIn</a>, <a href="https://mastodon.world/@konstantindenerz">Mastodon</a>, <a href="https://bsky.app/profile/konstantindenerz.bsky.social">Bluesky</a>, <a href="https://www.youtube.com/@konstantindenerz">YouTube</a>, <a href="https://github.com/konstantindenerz">GitHub</a>, <a href="https://codepen.io/konstantindenerz">CodePen</a> and take my business card ✨ with:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npx konstantindenerz@latest
-</span></span></code></pre></div>
+  
+<figure class="highlight">
+  <figcaption>
+    <span class="icon">
+      <i class="devicon-shell-plain" title="shell"></i>
+    </span>
+  </figcaption>
+  <pre
+    tabindex="0"
+    class="chroma"
+  ><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npx konstantindenerz@latest</span></span></code></pre>
+</figure>
+
 <div class="back-container">
     <span>
         <button class="back labs-ripple back-button">back</button>
