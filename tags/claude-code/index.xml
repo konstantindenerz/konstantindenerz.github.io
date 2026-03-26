@@ -6,12 +6,12 @@
     <description>Recent content in Claude Code on Konstantin Denerz</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 25 Mar 2026 12:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 26 Mar 2026 12:00:00 +0100</lastBuildDate>
     <atom:link href="https://konstantin-denerz.com/tags/claude-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cc-notifynub: A Pixel-Art Companion for Claude Code in tmux</title>
       <link>https://konstantin-denerz.com/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/</link>
-      <pubDate>Wed, 25 Mar 2026 12:00:00 +0100</pubDate>
+      <pubDate>Thu, 26 Mar 2026 12:00:00 +0100</pubDate>
       <guid>https://konstantin-denerz.com/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/</guid>
       <description>&lt;p&gt;My daily setup: &lt;a href=&#34;https://ghostty.org&#34;&gt;Ghostty&lt;/a&gt; terminal, tmux, and multiple Claude Code instances, each in its own tmux window, each working on a different feature. In each window I keep &lt;a href=&#34;https://neovim.io&#34;&gt;Neovim&lt;/a&gt; side by side for review.&lt;/p&gt;&#xA;&lt;p&gt;The problem? Jumping between windows with &lt;code class=&#34;shortcut-key&#34;&gt;Ctrl&amp;#43;A&lt;/code&gt;&#xA; + &lt;code class=&#34;shortcut-key&#34;&gt;window index&lt;/code&gt;&#xA; to check if Claude is done yet. Or worse, realizing minutes later that Claude has been waiting for permission to run a command while I was focused on something else entirely.&lt;/p&gt;</description>
     </item>
