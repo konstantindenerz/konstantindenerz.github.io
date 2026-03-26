@@ -72,9 +72,9 @@
   />
 
    
-  <script type="text/javascript" src="/main.min.032f636299ed77b2ba066570a09fbbf7840371c5d4e23ffaaba629490301b437.js" defer></script>
+  <script type="text/javascript" src="/main.min.c055c25225759e1e53e41d3ec7f84cdecb912cfc9986e715b20d8aa0f0dc9227.js" defer></script>
   
-  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.cea1d48c59150b59ed42453c5c8c76199b7dbec634b5faed1886a0a2e007247c.css" />
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.33807cc0674f2d26763015f829f18295625353316d64cb8687a604edc0e43ed0.css" />
    
 
   
@@ -239,9 +239,8 @@ As in most customer projects, I also set up and use a design system here. I took
 <li>The <code>editor</code> route provides the project&rsquo;s preview and an editor</li>
 </ul>
 <p>I created 8 view transitions during (router) navigation to animate the state change with CSS.</p>
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5XogC7gFbSg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/5XogC7gFbSg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <h3 id="live-demo">Live Demo</h3>
@@ -350,7 +349,7 @@ We can use CSS to assign a view transition name to an element. The name is the i
     tabindex="0"
     class="chroma"
   ><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">preview</span><span class="p">.</span><span class="nc">active</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="n">view-transition-name</span><span class="p">:</span> <span class="s1">&#39;preview&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">view-transition-name</span><span class="p">:</span> <span class="s1">&#39;preview&#39;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </figure>
 <p><code>root</code> is the view transition name for the root element (whole page).
@@ -368,8 +367,8 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">startViewTransition</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// Navigation to details route,
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// generally speaking, DOM manipulation
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">router</span><span class="p">.</span><span class="nx">navigateByUrl</span><span class="p">(</span><span class="s1">&#39;/detail/42&#39;</span><span class="p">);</span> 
+</span></span></span><span class="line"><span class="cl">    <span class="c1">// generally speaking, DOM manipulation
+</span></span></span><span class="line"><span class="cl">    <span class="nx">router</span><span class="p">.</span><span class="nx">navigateByUrl</span><span class="p">(</span><span class="s1">&#39;/detail/42&#39;</span><span class="p">);</span> 
 </span></span><span class="line"><span class="cl"><span class="p">});</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
@@ -418,7 +417,7 @@ The <code>view-transition-name</code> must be unique on a page otherwise the ani
     tabindex="0"
     class="chroma"
   ><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// app.config.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="p">{</span><span class="nx">provideRouter</span><span class="p">,</span> <span class="nx">withViewTransitions</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="p">{</span><span class="nx">provideRouter</span><span class="p">,</span> <span class="nx">withViewTransitions</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@angular/router&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">appConfig</span><span class="o">:</span> <span class="nx">ApplicationConfig</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">providers</span><span class="o">:</span> <span class="p">[</span><span class="nx">provideRouter</span><span class="p">(</span><span class="nx">routes</span><span class="p">,</span> <span class="nx">withViewTransitions</span><span class="p">())],</span>
@@ -440,7 +439,7 @@ I forked the Angular repo and <a href="https://github.com/konstantindenerz/angul
     tabindex="0"
     class="chroma"
   ><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">// list.component.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">private</span> <span class="nx">readonly</span> <span class="nb">document</span> <span class="o">=</span> <span class="nx">inject</span><span class="o">&lt;</span><span class="nx">Document</span> <span class="o">&amp;</span> <span class="p">{</span><span class="nx">startViewTransition</span><span class="o">:</span> <span class="p">(</span><span class="nx">callback</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{}}</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">DOCUMENT</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">navigate</span><span class="p">()</span> <span class="p">{</span>
@@ -493,15 +492,15 @@ The animation moves the preview part of the project card from small list item to
 <p>Therefore we have to assign the view-transition-name to the project card only when we click on the card.
 💡 I place this code in the component to simplify the demo, but this logic should be part of the router.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// project-card.component.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">async</span> <span class="nx">nav</span><span class="p">(</span><span class="nx">segments</span>: <span class="kt">string</span><span class="p">[])</span><span class="o">:</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// add class to assign view-transition-name
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// startViewTransition, navigate to detail route and animate the state change
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">navigate</span><span class="p">(</span><span class="nx">segments</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">    <span class="k">await</span> <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">navigate</span><span class="p">(</span><span class="nx">segments</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// project-card.component.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">&amp;</span><span class="nc">.active</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">labs-project-preview</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="na">view-transition-name</span><span class="o">:</span> <span class="n">preview</span><span class="p">;</span>
@@ -510,7 +509,7 @@ The animation moves the preview part of the project card from small list item to
 <h5 id="view-transition-new-detail-route">::view-transition-new (<code>detail</code> route)</h5>
 <p>The target page component requires the same view-transition-name:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">:host</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">labs-project-preview</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="na">view-transition-name</span><span class="o">:</span> <span class="n">preview</span><span class="p">;</span>
@@ -536,7 +535,7 @@ The following stylesheet is a global style file that is applied to the pseudo el
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// project-card.component.transitions.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">::view-transition-old</span><span class="o">(</span><span class="nt">preview</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">display</span><span class="o">:</span> <span class="ni">none</span><span class="p">;</span> 
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -596,7 +595,7 @@ The workaround should demonstrate the idea.
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// project-preview.component.ts
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="kr">const</span> <span class="nx">videoFactory</span> <span class="o">=</span> <span class="p">(</span><span class="nx">id</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="sb">`
 </span></span></span><span class="line"><span class="cl"><span class="sb">&lt;video muted autoplay loop src=&#34;assets/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">.mp4&#34;&gt;&lt;/video&gt;
 </span></span></span><span class="line"><span class="cl"><span class="sb">`</span><span class="p">;</span>
@@ -617,12 +616,12 @@ The workaround should demonstrate the idea.
 </span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="p">{</span><span class="nx">nativeElement</span><span class="p">}</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="nx">has</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">))</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Use video instance from cache 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kr">const</span> <span class="nx">video</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLVideoElement</span><span class="p">;</span>
+</span></span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">video</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="kr">get</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">)</span> <span class="kr">as</span> <span class="nx">HTMLVideoElement</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">await</span> <span class="nx">video</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">            <span class="nx">nativeElement</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">video</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">            <span class="c1">// Create new video instance
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">nativeElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">videoFactory</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
+</span></span></span><span class="line"><span class="cl">            <span class="nx">nativeElement</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">videoFactory</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">element</span> <span class="o">=</span> <span class="nx">nativeElement</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="kr">as</span> <span class="nx">HTMLElement</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">            <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">            <span class="k">this</span><span class="p">.</span><span class="nx">cache</span><span class="p">.</span><span class="kr">set</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span> <span class="nx">element</span><span class="p">);</span>
@@ -635,7 +634,7 @@ The workaround should demonstrate the idea.
 <p>Take a look at the video again, there are some micro animations such as <code>back-button</code> with a slide in animation.
 The animation style sheet looks like this:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.transitions.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">::view-transition-new</span><span class="o">(</span><span class="nt">back-button</span><span class="o">)</span><span class="nd">:only-child</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">animation</span><span class="o">:</span> <span class="n">slide-in-from-left</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">view-transition-duration</span><span class="p">)</span> <span class="ni">ease</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -662,7 +661,7 @@ Both routes includes the <code>back-button</code>.</p>
 
 <p>I created the close animation to animate the transition from <code>detail</code> to <code>list</code> route.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.transitions.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">::view-transition-old</span><span class="o">(</span><span class="nt">detail-page</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">animation</span><span class="o">:</span> <span class="n">close-to-top-left-corner</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">view-transition-duration</span><span class="p">)</span> <span class="ni">ease</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -689,7 +688,7 @@ The definition of <code>view-transition-name: detail-page</code> should be activ
     tabindex="0"
     class="chroma"
   ><code class="language-ts" data-lang="ts"><span class="line"><span class="cl"><span class="c1">// detail.component.ts 
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nx">navigateBack() {</span>
 </span></span><span class="line"><span class="cl">    <span class="k">this</span><span class="p">.</span><span class="nx">elementRef</span><span class="p">.</span><span class="nx">nativeElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;full-page-transition&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="k">void</span> <span class="k">this</span><span class="p">.</span><span class="nx">router</span><span class="p">.</span><span class="nx">navigate</span><span class="p">([...]);</span>
@@ -729,7 +728,7 @@ src="//codepen.io/assets/embed/ei.js"
 </video>
 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// app-bar.component.transitions.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">::view-transition-old</span><span class="o">(</span><span class="nt">special</span><span class="o">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="na">mask</span><span class="o">:</span> <span class="sx">url(&#34;~assets/tail.svg&#34;)</span> <span class="ni">center</span> <span class="ni">top</span> <span class="ni">no-repeat</span><span class="o">,</span>
 </span></span><span class="line"><span class="cl">    <span class="sx">url(&#34;~assets/space-landscape.svg&#34;)</span> <span class="ni">center</span> <span class="ni">center</span> <span class="ni">no-repeat</span><span class="o">,</span>
@@ -787,7 +786,7 @@ Mask-position and transform properties are changed during CSS animation:</p>
     tabindex="0"
     class="chroma"
   ><code class="language-scss" data-lang="scss"><span class="line"><span class="cl"><span class="c1">// detail.component.scss
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nd">:host</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nc">.special</span> <span class="k">&amp;</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">        <span class="na">view-transition-name</span><span class="o">:</span> <span class="n">special</span><span class="p">;</span>
@@ -1068,9 +1067,8 @@ the future holds even greater promise as the router takes over this functionalit
       >Privacy Policy</a
     >
   </div>
-  <div class="copyright">© 2025 Konstantin Denerz. All rights reserved.</div>
+  <div class="copyright">© 2026 Konstantin Denerz. All rights reserved.</div>
 </div>
-
 <textarea id="clipboard-input" class="visually-hidden" aria-hidden="true" tabindex="-1"></textarea>
         <div id="labs-snackbar"></div>
     </body>

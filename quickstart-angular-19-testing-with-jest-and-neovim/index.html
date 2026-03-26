@@ -72,9 +72,9 @@
   />
 
    
-  <script type="text/javascript" src="/main.min.032f636299ed77b2ba066570a09fbbf7840371c5d4e23ffaaba629490301b437.js" defer></script>
+  <script type="text/javascript" src="/main.min.c055c25225759e1e53e41d3ec7f84cdecb912cfc9986e715b20d8aa0f0dc9227.js" defer></script>
   
-  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.cea1d48c59150b59ed42453c5c8c76199b7dbec634b5faed1886a0a2e007247c.css" />
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.33807cc0674f2d26763015f829f18295625353316d64cb8687a604edc0e43ed0.css" />
    
 
   
@@ -216,9 +216,8 @@
 
 <p>Looking to simplify testing in your <a href="https://angular.io">Angular</a> 19 monorepo and integrate it with <a href="https://neovim.io">Neovim</a>? This guide will show you how to set up <a href="https://jestjs.io">Jest</a>, configure Angular for Jest, and use <a href="https://github.com/nvim-neotest/neotest">Neotest</a> with the <a href="https://github.com/haydenmeade/neotest-jest">neotest-jest adapter</a> to run tests directly in your editor.</p>
 <h2 id="demo--source-code">Demo &amp; Source Code</h2>
-
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bgFl-oWfmYo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/bgFl-oWfmYo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <p>Here is the source code for the sample app used in this guide: <a href="https://github.com/konstantindenerz/article-angular-jest-neovim-setup">GitHub Repo</a>.</p>
@@ -276,11 +275,11 @@
     class="chroma"
   ><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;builder&#34;</span><span class="p">:</span> <span class="s2">&#34;@angular-devkit/build-angular:karma&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;options&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </figure>
@@ -303,7 +302,7 @@
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre>
 </figure>
-<h2 id="i-classdevicon-jest-plaini-jest--i-classdevicon-angular-plaini-angular"><i class="devicon-jest-plain"></i> Jest &amp; <i class="devicon-angular-plain"></i> Angular</h2>
+<h2 id="jest---angular"><i class="devicon-jest-plain"></i> Jest &amp; <i class="devicon-angular-plain"></i> Angular</h2>
 <h3 id="install">Install</h3>
 <p>Set up Jest for Angular 19 by installing the following packages:</p>
   
@@ -424,7 +423,7 @@ Include the following code in the setup-jest.ts file as it is required:</p>
 </span></span><span class="line"><span class="cl">Snapshots:   <span class="m">0</span> total
 </span></span><span class="line"><span class="cl">Time:        1.477 s, estimated <span class="m">2</span> s</span></span></code></pre>
 </figure>
-<h2 id="i-classdevicon-neovim-plaini-setting-up-neovim-for-neotest"><i class="devicon-neovim-plain"></i> Setting Up Neovim for Neotest</h2>
+<h2 id="setting-up-neovim-for-neotest"><i class="devicon-neovim-plain"></i> Setting Up Neovim for Neotest</h2>
 <h3 id="enable-neotest-lazyvim-extras">Enable Neotest (LazyVim Extras)</h3>
 <p>Neotest is a Neovim plugin that streamlines test discovery, execution, and result visualization - all from within your editor. To enable the Neotest framework in LazyVim, add the <code>test.core`` extras to your LazyVim configuration. In many setups, this is done by editing</code>~/.config/nvim/lua/config/lazy.lua` (or whichever Lua file you’ve designated for LazyVim plugin declarations):</p>
   
@@ -585,8 +584,8 @@ Include the following code in the setup-jest.ts file as it is required:</p>
 </span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">config</span>: <span class="kt">Config</span> <span class="o">=</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">preset</span><span class="o">:</span> <span class="s2">&#34;jest-preset-angular&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">roots</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;&lt;rootDir&gt;/projects&#34;</span><span class="p">],</span> <span class="c1">// Points to all projects
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;&lt;rootDir&gt;/setup-jest.ts&#34;</span><span class="p">],</span> <span class="c1">// Global setup
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">};</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s2">&#34;&lt;rootDir&gt;/setup-jest.ts&#34;</span><span class="p">],</span> <span class="c1">// Global setup
+</span></span></span><span class="line"><span class="cl"><span class="p">};</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">config</span><span class="p">;</span></span></span></code></pre>
 </figure>
@@ -845,9 +844,8 @@ Include the following code in the setup-jest.ts file as it is required:</p>
       >Privacy Policy</a
     >
   </div>
-  <div class="copyright">© 2025 Konstantin Denerz. All rights reserved.</div>
+  <div class="copyright">© 2026 Konstantin Denerz. All rights reserved.</div>
 </div>
-
 <textarea id="clipboard-input" class="visually-hidden" aria-hidden="true" tabindex="-1"></textarea>
         <div id="labs-snackbar"></div>
     </body>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Developer Experience on Konstantin Denerz</title>
+    <link>http://localhost:4200/tags/developer-experience/</link>
+    <description>Recent content in Developer Experience on Konstantin Denerz</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Mar 2026 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:4200/tags/developer-experience/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cc-notifynub: A Pixel-Art Companion for Claude Code in tmux</title>
+      <link>http://localhost:4200/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/</link>
+      <pubDate>Wed, 25 Mar 2026 12:00:00 +0100</pubDate>
+      <guid>http://localhost:4200/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/</guid>
+      <description>&lt;p&gt;My daily setup: &lt;a href=&#34;https://ghostty.org&#34;&gt;Ghostty&lt;/a&gt; terminal, tmux, and multiple Claude Code instances, each in its own tmux window, each working on a different feature. In each window I keep &lt;a href=&#34;https://neovim.io&#34;&gt;Neovim&lt;/a&gt; side by side for review.&lt;/p&gt;&#xA;&lt;p&gt;The problem? Jumping between windows with &lt;kbd&gt;Ctrl&amp;#43;A&lt;/kbd&gt; + &lt;kbd&gt;window index&lt;/kbd&gt; to check if Claude is done yet. Or worse, realizing minutes later that Claude has been waiting for permission to run a command while I was focused on something else entirely.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
