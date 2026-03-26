@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://konstantin-denerz.com/tags/bash/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/claude-code/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/developer-experience/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/post/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://konstantin-denerz.com/tags/tmux/</loc>
+    <lastmod>2026-03-25T12:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://konstantin-denerz.com/tags/angular/</loc>
     <lastmod>2025-01-13T11:11:00+01:00</lastmod>
   </url><url>
     <loc>https://konstantin-denerz.com/tags/jest/</loc>
     <lastmod>2025-01-13T11:11:00+01:00</lastmod>
   </url><url>
-    <loc>https://konstantin-denerz.com/</loc>
-    <lastmod>2025-01-13T11:11:00+01:00</lastmod>
-  </url><url>
     <loc>https://konstantin-denerz.com/tags/neovim/</loc>
     <lastmod>2025-01-13T11:11:00+01:00</lastmod>
   </url><url>
-    <loc>https://konstantin-denerz.com/post/</loc>
-    <lastmod>2025-01-13T11:11:00+01:00</lastmod>
-  </url><url>
     <loc>https://konstantin-denerz.com/quickstart-angular-19-testing-with-jest-and-neovim/</loc>
-    <lastmod>2025-01-13T11:11:00+01:00</lastmod>
-  </url><url>
-    <loc>https://konstantin-denerz.com/tags/</loc>
     <lastmod>2025-01-13T11:11:00+01:00</lastmod>
   </url><url>
     <loc>https://konstantin-denerz.com/tags/testing/</loc>
