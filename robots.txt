@@ -1,0 +1,35 @@
+# robots.txt for konstantin-denerz.com
+
+# Default: allow all crawlers
+User-agent: *
+Allow: /
+
+# AI training crawlers: disallow (content not licensed for model training)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+Sitemap: https://konstantin-denerz.com/sitemap.xml
+
+# Content Signals (https://contentsignals.org/)
+# search=yes: content may be indexed for search
+# ai-train=no: content may not be used for AI model training
+# ai-input=yes: content may be used as AI agent context/input
+Content-Signal: ai-train=no, search=yes, ai-input=yes
