@@ -67,7 +67,7 @@
    
   <script type="text/javascript" src="/main.min.0c05fe962059caeda20a9595bd3407319044f46dbae308b3256fb98946f848ba.js" defer></script>
   
-  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.f867cae8e1fd2e025a43bc11e451f71166e84a79e0fbc86d8ae278a45a35b39f.css" />
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.7b3fd40b0e2600cb69436da0f7804895f25f2245d71439ab9fece9b690687dda.css" />
    
 
   
@@ -192,21 +192,26 @@
 <div class="labs-projects-page">
     <header class="labs-projects-intro">
         <h1>Projects</h1>
-        <div class="labs-projects-description"><p>Animated CSS and JS demos — each one isolates one or more interesting browser techniques so you can see how they work, learn from them, and remix them.</p>
-</div>
+        <p class="labs-projects-lead">
+            A growing collection of side projects, demos, and experiments I publish alongside my <a href="/about">day-to-day work</a> — built to share technique, spark ideas, and start conversations.
+        </p>
+        <nav class="labs-projects-filter" role="tablist" aria-label="Filter projects">
+            <button class="labs-projects-filter-option" type="button" data-filter="ai" role="tab" aria-selected="false">AI</button>
+            <button class="labs-projects-filter-option" type="button" data-filter="tools" role="tab" aria-selected="false">Tools</button>
+            <button class="labs-projects-filter-option is-active" type="button" data-filter="css-js" role="tab" aria-selected="true">CSS / JS</button>
+        </nav>
     </header>
 
-    <ul class="labs-projects-grid" role="list">
+    <ul class="labs-projects-grid" role="list" data-filter="css-js">
         
-        <li><article class="project-card" aria-labelledby="project-poYVOpv-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-poYVOpv-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/hexagon-grid.828d00d765a36bd2912c5b3a66a88b4e7e7f8cb34985a5d6d7e8c25bbf0af2812997f67d8ef5870a5edca64b8ac586ac6d3d725f88ce47c43e89d41499d4a17a.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/hexagon-grid.4e1a731fa7da53e15198c93304c180451c00d41c950010a9df03cdd811e0e81962a7a3b558270f4746c7ffe3166493517f07e763a5bbafac45158c36ebb4f453.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poYVOpv" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poYVOpv" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -259,15 +264,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-dyrzjPq-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-dyrzjPq-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/arcade-button.cd3a28746be673310996595496af928a3bc9b775321bb5cce24695abf9ea81634f82d68431eb5ee03a74b0336826591a54413952deca5e74233f6af2acbf7a47.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/arcade-button.be6277384c2e9102f6896b84833c6c8ad694537517f95e9c8c792db44adf1f1bc844c49d3f3f23343e8882ac8f3f4e56a5b355a8fc88aeb8ea4395ff4b979503.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dyrzjPq" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dyrzjPq" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -320,15 +324,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-abaXabq-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-abaXabq-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/css-view-transition.03cb8f8fb26a4b3cb4155368bf9d524d4c2ba6a1a5db9927a5d38ee4bc9e1bf7d8eb005e8dfa40a1ff59ce3d8cc578c22c10bfbb878b553f384440bc18e36235.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/css-view-transition.6269c5937582dda56e9290a79b3214633968b07001fb8ad94a4e62ce8655181fc53e47b2b48cd1735cbf5662e7f7c51fedd4083f2777836dd129b1edc355967a.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/abaXabq" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/abaXabq" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -381,15 +384,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-zYJzvEQ-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-zYJzvEQ-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/motion-blurred-number.d89be9669e15eb43c88337377e7e1655a7ac1cbb410b77f27c304688be973911a3ffffc35685ce835299575eda35533dcc9fae38bd3b3b888c2cc3d66f571ce3.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/motion-blurred-number.1cc27592c392a6e257303f1d864ca5f6e4121bae35792d29367cc1096ca73cdb1a327e525848634a1a975933561bc6e1928f006f6f490d7237b138ef89c893da.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYJzvEQ" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYJzvEQ" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -442,15 +444,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-KKxeWKj-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-KKxeWKj-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/3d-glass-switch.d0409857ddcbe3dd2155935b07cc4cd9eb9de0bfe048724643157cc577d7bd4066378c95a5e342076e289166065cd9a7e4c2efb00a0d916986a45aefabfb3bc1.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/3d-glass-switch.b1f5d5474086bb2b5c4db0ca3feba82943f760e02d47f7c5528069035335502095b3d589fe6f07e2b0f00acbe09c69fbc257d052c2718e9964e72df048ee0d49.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/KKxeWKj" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/KKxeWKj" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -503,15 +504,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-poYmNxw-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-poYmNxw-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/hack-the-gibson.9501cba2d087dfe0572a8bf4895de85936df3aac1e86e8863355a7bdbf4c913afa6488bc8d20b7d4062f5889636ea76cd39cde3f31a2368c10815caf1df7bb52.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/hack-the-gibson.f6e37e22be20affccd0e3e2a0b17d83f8a7b78b28249cb4e419b5ab0e1dc5ac9bae99ce46dc9a774e75358e528fee36d1bf076d5da7720f03e1725821f63b80a.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poYmNxw" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poYmNxw" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -564,15 +564,14 @@
 </article>
 </li>
         
-        <li><article class="project-card project-card-portrait" aria-labelledby="project-vYMPZKz-title">
+        <li data-category="css-js"><article class="project-card project-card-portrait" aria-labelledby="project-vYMPZKz-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/cosmic-dreams.fb2dbde5fec5af48e9196769bee75fd6642cc8c2047e3657568dc4257db3b9adedae977bcbf3d02951857fa0e7b39b6183ac6809d502caba9c1c7a5b1d79f5ea.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/cosmic-dreams.7414d282c06fb1f4a09aa0b3bc32af0e70cdaf8a626b0b03189bab5174aaa462380f1e45f0ed2c978a40e84f7fe3d404d68d30c067f6ae3ebfaf1400d687ad01.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/vYMPZKz" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/vYMPZKz" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -625,15 +624,14 @@
 </article>
 </li>
         
-        <li><article class="project-card project-card-portrait" aria-labelledby="project-yLxpjYz-title">
+        <li data-category="css-js"><article class="project-card project-card-portrait" aria-labelledby="project-yLxpjYz-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/flux-capacitor.a54f695c59d13d81c73ff5ab676b08a97cfea1fee802b533d0ba1ecb7488c702c5fd49c9fafb7ccd5ca31eaf6b79fb0e29bc6be763ccecafbad7cc92704b8318.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/flux-capacitor.cb98672bd10c4265ba88ea22600c29048bd32b83b0128481f530e83c0db5af4d465c3aa26672cc84e5d8a828a2ea9bb10c95964e07e829cb1e70a73e0bc8b2ae.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/yLxpjYz" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/yLxpjYz" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -686,15 +684,14 @@
 </article>
 </li>
         
-        <li><article class="project-card project-card-portrait" aria-labelledby="project-WNgEqbG-title">
+        <li data-category="css-js"><article class="project-card project-card-portrait" aria-labelledby="project-WNgEqbG-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/animated-retrowave.cb572c922599e987ec01f375c37d255d00102070a8aa22435c12137a08a1ab0556c363ab6821c7882d4d8d6d6ff89a54054db3f5b0109cc7815e834b356450b7.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/animated-retrowave.8dd2d50bc2cd32ed78a2c60f20df027a67ab9410aa5df240c5a6b5ab35d49bb8c4ce9c455c40abdec799448922f74f910ee4a5ac76afc320366908435d99c209.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/WNgEqbG" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/WNgEqbG" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -747,15 +744,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-YzgRQZj-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-YzgRQZj-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/video-to-ascii.d668107299745953cd43f5b2d8c670a529435c7cea55430aa2588a3131e65c0856f89238448215efbf11ea4f51fd1630b2db6a35fc52766643940a1e69892990.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/video-to-ascii.3087028d6604e363edda425823fa2fe83b7ec8367e312f7cd03d25659a9e9add2a9adf79a866651ab186c6c66210ccc6f5077376a49eb4a13b48e0c19c52328d.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/YzgRQZj" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/YzgRQZj" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -808,15 +804,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-MYWJRoo-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-MYWJRoo-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/ai-interaction-visualizer.187e5c082dcc75ae8f02608dc77554cb5434ec928e89e7629b3b501d8b3b090c857c0edb7b63e5828c3f3461c8def179977da57ef6d7a95a61dd18806afa4f47.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/ai-interaction-visualizer.7feeef27f9d06d820c4aa701314d8fb4c440370429139e9e121d0b7154472fe2c1eb259258b754e41193706417cad73236c75bdd8b6afd6715c82f5eb0ee5daa.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/MYWJRoo" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/MYWJRoo" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -869,15 +864,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-XWPpvpg-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-XWPpvpg-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/holo-card.1f970dc266e14f782ea529fd2f33dcd422c06f8d0c5d2835c38915bc743feb2572567b297fbaef353c082ec9d324ab4d43038c1137ad778784c57049c6216985.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/holo-card.2e886229da86e38ab59cb43a23fc6feb742698db2e3aa6023a694f0068eef78edc0613135fd4a0b52a5c4e84280038f13452e9f4471eaa108838e98834ff9202.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWPpvpg" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWPpvpg" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -930,15 +924,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-VwoEJqP-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-VwoEJqP-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/glassmorphic-rhombohedron.8c1294c1bfa556c8d682a9096c1d41700cf219441282accd2c283a298416951c9de76a521dd780ca09c9e527031ea2e808b0d2a1ab707ec61a5af34f337612ad.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/glassmorphic-rhombohedron.973b72baa95f401c23b0acea3f4959c3e54907ddb44f9e17fbc8a85578aa32bf69ba12c81d4fa67e85e7f4cf5da37ae5ddea9e629ffd5539b3f39adc35de3481.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/VwoEJqP" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/VwoEJqP" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -991,15 +984,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-XWQWYVW-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-XWQWYVW-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/eletric-spinner.5cd45a889ad2b6b7b3700a5c60c9e28991fa46a6da287754beedf95b2b041a1fa196eb1a44e234f18b1e4e10fbc67673b5aa1f53d44383da67056d4c507839ad.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/eletric-spinner.f76e339c9d0ea60abf9dc6e5928493d0f2a6546db4d59b377bb98427208b487a19b0ad6e53cd558a69615d06530de7ed4fcb5da3814e08a5678444e895425c67.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWQWYVW" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWQWYVW" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1052,15 +1044,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-zYbpNmz-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-zYbpNmz-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/synthwave-rain.66df2a32dca11bbd66f0e815ad5830595685b01ee82f450f5a98d6128cc55d5411be25577e4e9d00433f7b3f37d0bb675c1051db8223dda31900c82a99390d5c.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/synthwave-rain.700e61ab16917a114349d6d0ab31b1a59eb89640a9789b5057c350004a0d932f25e6c2f9e7bf56b871de102830ca02c36245344fb02d9d451d51b2356b09b460.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYbpNmz" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYbpNmz" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1113,15 +1104,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-qBMvXNK-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-qBMvXNK-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/neumorphic-liquid-slider.7e3983a8ec0985e82dbbbd1481be2d53bd0e07745e6cc281e6abe7b2da0f086fda712b96d550f846c6bf68b2f4900e51e9dcf94815ef343e8bb0de09ea57c221.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/neumorphic-liquid-slider.6a636bba648d35993568b06cf05c70f4397d0897a4825d370a7f80907a9c7ef8b957aabcf9a4b1c0e02a96f54964dc1a85a7f3446f9f5ce5942da90f195599b0.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/qBMvXNK" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/qBMvXNK" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1174,15 +1164,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-bNGQpqJ-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-bNGQpqJ-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/ying-yang.4a062b42a8d204b98acb407bf46c1d216c70cc15e625d9c9403fb9e035241d440d7c7215e8b16ccc838131d4a3a276fc241fb7830049116cc64e0dc8b8f604e0.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/ying-yang.a31ba82d8e93244184418d8439c212275dfbe5d5142a58056433e6e8cfd3a3eb191e4d1ee0cc28dd7b8a3b225abafd92ecae46d692fcec10bf89f4efeeaabf3f.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNGQpqJ" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNGQpqJ" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1235,15 +1224,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-NWZRYXK-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-NWZRYXK-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/glassmorphic-cube.34ec354d718bda82fd4d8ea73cb2edae158434ea1769d05bfa48fe31184919eccc7ca66d673bc1f96b22110ce4396701b8696f47f7cf8fce19c7563fea4c5f8d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/glassmorphic-cube.41211e5cd532cf4ad74a62d0e974ffc49b0867c732d51089c9ee4054850e335d36a4714db7332a06c95cf318b40bcc5364b375e6ece2c7a0036b5091d9c58842.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/NWZRYXK" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/NWZRYXK" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1296,15 +1284,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-emYKEgd-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-emYKEgd-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/gooey-stars.383eb33a0abf42956dc3126584efdce972ba6ce77e6aa9087eeaf0f96d263373e99a2268a3fa0079c026d0fdb3889ce5c4a7412a840a615f6a914ffe35e7cdfe.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/gooey-stars.605c55a1a63e97836fa0a2e8c718babc6ed446ce39ecc7d7c51da6031d30c62b9226ff934f128c5ec68ee1900cd534940ee408b4ed4bdf8685eda10ad6109442.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/emYKEgd" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/emYKEgd" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1357,15 +1344,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-xxyZJpO-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-xxyZJpO-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/sphere-cubes-intersection.c8c6af9cbef4e8cb9a92aba5edd50f745c334fef63754bdf7adafafdbf1854194aa38aa9d04d5098473bc342c043a9590fc36b57c87f1080ed7c613472d6e789.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/sphere-cubes-intersection.53ab5d03a48a8664342f38b043e15c4f5fa9d5bddc1113d1d2be4b32b73c07eef06cfad0e89ca07c7ccad81495c0dc3f2d9873d7c3419c1cfe027b2f33750088.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/xxyZJpO" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/xxyZJpO" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1418,15 +1404,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-GgRxXdg-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-GgRxXdg-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/bookmark.afbfbacd160f725504846a33af1b208b8a0dcc342143a3517e1840c197f2440b279d34370ce349922ba77b3c1181de312afa9fd3a2ebb83a61cadd0985e7a20d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/bookmark.2ce942c4950b35e0ecdca48ab9ddc01017cc0ceb7a064f38ef647d67316fd59d34b0f00fb6565577777538b22c1f9f7e26ee9b1cbf19a79af6bc68a8a49b7f51.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GgRxXdg" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GgRxXdg" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1479,15 +1464,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-zYXONxz-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-zYXONxz-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/scratched-folder.9f9f3ca0958a119f7ef33425dbc18090ec6947e24dba6a88765b71284818c34e88f47d38b24ba596d64ffed50d41dd0744872817bb583220c82110c702446068.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/scratched-folder.f50679fb3f38282b5e10ae2775e2af5455c173f699807a86f8b68d9744971e817bb65a7a40a9cb706a813665a0e618d90bafa266c0c8710390f5f0cde7523996.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYXONxz" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/zYXONxz" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1540,15 +1524,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-gbOKRQz-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-gbOKRQz-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/gooey-ring.5aa4790169653bd1868bd121a2b79d1eccefe53a4cd10e3ccac24287c362123d23936cfb3be42a68beef8c1235bdb879f0004d119fa1752246b15c321eaf786d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/gooey-ring.658766ce1ca70889adcb53f0861ad1eb5a4e257a3570aec1594170c216f89c90a37f4cbac8b3106d4535d5d981f065e52a4ee45389bd5a6a1ebf088861a528f0.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/gbOKRQz" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/gbOKRQz" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1601,15 +1584,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-qBwpLZW-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-qBwpLZW-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/speed-indicator.4b67f8312998eb1c778a41e6cb11f6d340594f160c8317afc6ad7ce4b0762cbb43ff114d20d515c8ebb633f029bd272f25c41675fbc71fbff0bfe312895fc7dc.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/speed-indicator.cd21b35a7f288e378427c3fe4b56842e6323328ec265ef4abf64e07c70051ca85d68a791be74fc2c1228c32ff0b7d5902674e0cc1a25b7629d8ce7b0fc84b566.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/qBwpLZW" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/qBwpLZW" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1662,15 +1644,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-bGZXmRZ-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-bGZXmRZ-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/designers-eye.3bcb19fddc260099ed09f6c3d31fb252036c559fe7a41062ec1805a967f968737ce7f7ee64736b7858991e739c9f4edb414da38397f5f660fc126fce98663e7e.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/designers-eye.a015c0896c61e823e6120362114ab9886c9c546487c0bf1a444f65d8791188cf5ba8b5ce1ecaf9e29cae61da3a70432f0748b81e964b5fd6dc154dc9a2a58d7f.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bGZXmRZ" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bGZXmRZ" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1723,15 +1704,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-dyxONQb-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-dyxONQb-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/boo.fd8d13c3b5bd75f702c5551ffe4277da9e67ae89567d1d4fd05a6c6c1e1e1f707fe4516cd31f34c99cd377287c16ff5bb880835fea567749d90db2c564229611.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/boo.cb7bfcffa70ab66ece8797075f01e4e83e95876ec5a4844532d5663513453f5808c4c9eda25e5d9446e97cc3c43d2bb2849be5cf9bd56d6a39cf8d83722e50a7.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dyxONQb" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dyxONQb" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1784,15 +1764,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-VwEVRXa-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-VwEVRXa-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/pyramid-diamond-explosion.0f4129a8a34ff635d6dcee3400efffbc3b9174889b00645537541fce43cca60dad4f59d0a99497de8c9099d3ef19b89bff565d6a7a081b33165740be73a0b23d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/pyramid-diamond-explosion.0ac106aebdbc8dabdc128f3cba3a6b7e6f67fd8816aeb6c55125964ed5d7c573b72852fa09249bf7c19e572743367deecbe1fd70600a07eda66f28825f5d524d.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/VwEVRXa" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/VwEVRXa" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1845,15 +1824,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-xbKyjzM-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-xbKyjzM-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/isometric-cubes.567c4609d35acace9d0e241fb102f24f72ed5d5e131d92468fde0a018dd51b0fe0c564c8ae368ec236684b9b3b3581b9a22a97635d85bc91b5f7bcf3a3822e15.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/isometric-cubes.b7037d1a1c13a6a32d5821d48499a413ef7f3dff0481f3f0a1eb326c7df9dfefcbbb011b8bf6650496c809cbe4c837e6adddba4931446fac11edbad869257221.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/xbKyjzM" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/xbKyjzM" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1906,15 +1884,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-mdGpxKg-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-mdGpxKg-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/animated-logo-glitch.5e979d2c7e2286c59c982fa93df9274434fba8efc2be8e9f0e70654cc0a78d03e6fa1bd6e2f48b9afb38a89fda4fe6e71570054bd29552a7b8515b93cd75970e.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/animated-logo-glitch.abd7e44429853e12e1ab41cbee3b154e40a1f51d01396cea8a3da2cce2f2f980eb0db9699c1817ee47ed511c6dc7f56b113f5f63990177e2b977409df6b44fa7.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/mdGpxKg" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/mdGpxKg" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -1967,15 +1944,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-ExJZPZO-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-ExJZPZO-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/dna-strand.991b8d336ab9cf7900f5b2224094c9ceee80e243b35e1dab28bf333fac1ac9b3a4e13d459b3146f3739b335c3a09a7fcc5c92c4c262afe0d9e76b32eff744b94.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/dna-strand.1213a30d879fd39a923da03be03771e0b7363e51e2a2f8175c8615569395cb9251307f4c80cf1176aad697a10cddef53fde022a7ccca0b735003491aa8ae4480.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExJZPZO" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExJZPZO" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2028,15 +2004,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-YzgjYmY-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-YzgjYmY-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/star-rain.7fb13f1db038260cb4f43010ffb5632d856fbd81e6b8b0f9ce1ef99f04093d02b9ca8032e184722144b3d37625c378fc62b216fa3e5e0674cd343f958cee9985.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/star-rain.32a3deac953c6900472c5f271997ad2c54ff937163242aa15569cc4e11044c39367663edbff7bf411c8be077dd923e15b9b89e5c956bccc829aa14df09ed03b9.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/YzgjYmY" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/YzgjYmY" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2089,15 +2064,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-ExJQZyo-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-ExJQZyo-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/c64.12ff2ed27bbf59e2db75323cf5835d8f88e0f33fdf26ca4852042ad15001eca372a5c75ab86e9c6037918bbd2f636faf994f5b5616ef1ae126ff466ee1454714.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/c64.b4e32a5b5bf36861f98f1be63f65702cc12f05447ab012f4558c2bdd33357b3573958bdaac8b193f2d90b61484e4cb6dc5994f144579041339b6e2ac9a36a7a3.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExJQZyo" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExJQZyo" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2150,15 +2124,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-dPPvqPB-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-dPPvqPB-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/night-flight.264ef8d5a0726825368572250e47f407690a8aab46bfb4f88d1e9fcabdfdadcec7f819820e60aa12e883b0b30ee1798624a68fe0a661583b390349c7b18b4401.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/night-flight.e52a10567db0d153e4bc479908b5b1d034b912698ba003a1c481c0a57cadab06a6e534bcc9a16221e07520bcd90ea77b9a2d2c7177bf01ae3d27233121ee453d.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dPPvqPB" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/dPPvqPB" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2211,15 +2184,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-rNgNBKY-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-rNgNBKY-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/fractal-tree.10c81498bba2ad9df9d2164deca6aad106b8ae27d3e6155f2fc5b8d59ff208b56120a550645d7632483026792deef7e396aa03c4d89e834360d24e1cb0a77db4.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/fractal-tree.5e2be04b7d06ef2433560a0855f1afbfc1ff8b905a253ea585158899602075f0343e7765522b975d9932b5345046a3a54d61c143843deb313fad48b296e53cb1.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNgNBKY" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNgNBKY" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2272,15 +2244,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-poMJXQj-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-poMJXQj-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/split-keyboard.f5e862d87dc3344a65cad914e33540bda0b6db9b4d0dab06ad8266935647e6f0f1a4215cc75e2d2c8e6eb10b73b9fa1cc0e261fd0c6648d12555c26a083f9462.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/split-keyboard.95ce9fba607b6a852a577b178a94d17da4690c4ce2c8279ba15bfca6f56403d484c2808aa1240199b32c6487204a65796533204168e976df45b32b652ba09206.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poMJXQj" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poMJXQj" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2333,15 +2304,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-bNNGLXN-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-bNNGLXN-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/wave.75ae41648d923f841b1a4fec32f3cc591e5f8faf2855ad42558e9e8ea0bd9009073d5ba09e1fde543817251d8871eded2af27c3dc0ff555b3d8a45d885d0ef1c.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/wave.13c6d0c2bf555598ae93d312cf83eeb0660f0d89d5cbc82316211d97a5c605a766833593e8f792af4ab05f4741cfebcc8099866508240007bb16082f2880ad19.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNNGLXN" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNNGLXN" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2394,14 +2364,13 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-poBPMWE-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-poBPMWE-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><picture><img src="https://konstantin-denerz.com/images/projects/3d-text.3062a7ad13e250976c801ab4a5827aa1f972a6daa3142e17cce0d2e3e363d8dc485e550bfe40bdf9c1705d614d501101f077bd349287ce1f10c3dd372efa783e.jpg" alt="" loading="lazy" decoding="async">
                 </picture></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poBPMWE" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/poBPMWE" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2454,15 +2423,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-rNZqaQa-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-rNZqaQa-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/material-fab.c02877fcfaae4a2fea5a08b7e2efc36062cd08a82a80787b4bfa9824fac1551be645038ba89fe70c480ae29721615cad27d41e07c4d2ea6f1fa9d6263a8987c2.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/material-fab.3c0410b2e95d768acc90efbe0889e1fd6f6229c64aa47d3542e85a7e43e5a1e8a41f1a1d263eb6209584666a0fbfe6d9c1dd8e5f83a82dc2f8e71726134e10c3.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNZqaQa" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNZqaQa" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2515,15 +2483,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-NWLbagY-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-NWLbagY-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/3d-reflective-card.45fcac81a5b3922e8a217d23131ca912b992181bbc94fd54d14836dff89af88a1aee6451d4faedd659b8f216683684f75fad0205b756c56865cc70fa3629a0d4.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/3d-reflective-card.571621121c795dc763195937b94feeaf8236db6041dcbc8cd136da803128f37068efe42c55e84b76d70866c4adfe006b6b321d1a57cd801809c6470240e296b2.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/NWLbagY" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/NWLbagY" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2576,15 +2543,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-rNXjraj-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-rNXjraj-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/pen-1000.ef104f85760daadc8bbc4bbc15f7773b44cfb7305b649f7052e6c100e8fbd6b777430baa8ea27dd296055578e73535367af914c4655db5eab48d72a60577401d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/pen-1000.3d5cbf46dedf17a5b28315fffcd61271925c3b10d5e48fbcd4e5271cb0112696f416e510c4f734f041311465cdb0cc922d14cf8082bbb5dbbd3c8a0a312af991.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNXjraj" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNXjraj" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2637,15 +2603,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-oNaGOpE-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-oNaGOpE-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/may-the-force.cfe782bd6b5dccea9d43340979641becbbffb45a766fee465ac7a38348ad110fd4072ef1d1c0b3557c63a853ec1d07039fd4a04bd2a2c5b1e30b9c5ee33477d4.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/may-the-force.255b0736cabcc57b81cd16adf59ab67d71d82ab192c61c500c740f070e88bc3bacc7121f9795baa6971c904e10fe313ad7db53b297a0568a150380249a6c2ada.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/oNaGOpE" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/oNaGOpE" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2698,15 +2663,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-XWQamEW-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-XWQamEW-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/medical-fui.50a815921e9b163b941a70b7666c45fa472d725cddfd509025df51b25755c0d9dccfc2929e5617405a18c4cd55107e9922ffc7dfbd35b43e4f8d535576d1027d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/medical-fui.4e1c4ca7b17b43396a4b0e8bb9f0d61ea90e554a3df78867940635ec71ea5b340c91c62e80ff5cfc0651cf76bf719dae7a51788d4602b6bd34e5bf19711c0f5c.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWQamEW" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/XWQamEW" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2759,15 +2723,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-abaaWEE-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-abaaWEE-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/animated-xyz.32b8374efd4e8712524ea3adceae9fc6e31178b2dd1b185b1edfbc63f1d18b49450583ad38ef4006a8c76c11b459ca3fe1d1eb313e949ef489a3acdfb9b27794.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/animated-xyz.e2ded6b325e595172979f66f85da66c0e301307701a6ba0488a13706fae0839dcb05d1a4c6258a5b05dbf36a7b0d0c0ab210b1745ad280102e142068c8785fb3.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/abaaWEE" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/abaaWEE" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2820,15 +2783,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-JjgRYQo-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-JjgRYQo-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/css-flow.c18d95af024797f58004b4b3ce0d7b2f634b7cfe569d02fc1e042c835db7b4eab116e24624d955182629ea6483b18496d8e1e2b1bf7b96f066502e8fe0b3df6c.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/css-flow.fa1576ebcb4bc49512cbcae00e2662bcee06108da18f01002badb462dbab4095e32702d73301e329b4755dea8383337b415fc6a2ba67e97e716d82e7a34bd757.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/JjgRYQo" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/JjgRYQo" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2881,15 +2843,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-KKOYdpp-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-KKOYdpp-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/random-walk.81c55f43c1036d2d81f3584a9befda39330cd4a97d44097c50b4931a01746d43a4ccc9064671516528d731da8d8d89ab948f1e54423fa513526304fbaeb13a5d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/random-walk.faf38a92357a0f40b5a48eea7d25b9fe86832811b38f5d8e80f8f1b3d84d1e765b6245ea04a242b62f71175032f05b6b55d6e772668fe7473132a8dbfa3831b4.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/KKOYdpp" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/KKOYdpp" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -2942,15 +2903,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-bNGRjjv-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-bNGRjjv-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/diamond.224e8a67e97b9b038a33152c8a23b414bd7f6df324754b6e903a7bb0536815d9ee8863eeef6a7d5c7370c5e0ef3961508eb25cd377dc9869c357c9b1fd1e3bb2.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/diamond.a1df944d7f844a2a66e8355ef0175c71163989f39b83982408327e1f648aa9b262f96e030bdd4f7593b951dac7fecd4551d05055a13c211533fc1c967ebc1bc2.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNGRjjv" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/bNGRjjv" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3003,15 +2963,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-PogEpWK-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-PogEpWK-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/pen-300.bbd98325baf6f98ad1c299752ac8e4a0972c3e89c30bb88dfd0ff05b71e1ad47d0d60ef8b905d630c39c1b4293371a7b3d70798647c7b3ff56af85ccf15a561d.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/pen-300.6f9e593a1b7cbfc8b75d8e381e0628bb1370eae7637a4b8c9d379cd913ad387426647850b0a81d819bb0ba26b4d115d73489e4b2f198722e2bc7b55bc88438f5.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/PogEpWK" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/PogEpWK" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3064,15 +3023,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-ExqzZpw-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-ExqzZpw-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/random-walk-2.1cfbe38830603b488c25f9f056eb1b3a75754c0a5544696423c217ad174e36982d7e894729d7a73425ef691707bf1a9c28ae420b06af0144c10f1673df1f75ce.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/random-walk-2.2e27004588fe3175744824f4a00c3ad8b309b5c2d7f26894bfd33214e422a82b7c6ad41a9733e68d39fa8c9c4a97ee3499793d9c3d0b7d40d7ae875ce432c577.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExqzZpw" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ExqzZpw" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3125,15 +3083,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-vYMxmyX-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-vYMxmyX-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/vortex.da3a79f1bf9983cbe32a9b80e7c7804c3d15876edeb92f1df835b521cf68adfbb1df0fba9935b916e48485fa8cb0713815f5880bed79a3590596ae7e172c09af.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/vortex.c4a062d1bfcfd4f033354eaa7b49831c56351af3b60755f869c5b4a7c7f68f7afff4801b03bb83ed70fd8bdfa3bbd2a927b749b8f4aeaf96431fd9355e613a72.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/vYMxmyX" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/vYMxmyX" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3186,15 +3143,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-rNqMRQo-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-rNqMRQo-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/angular-vnext.5be2d75590cae4ac0ece1567038e0e3a15bd18db71a3787f12adc6b9da4bd0090283c47529aa0b24eca838a997fe34fe35b9e8bb03bac1442b9aa1afbdb6a279.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/angular-vnext.43df23fbb7e772e35ae0b1f7b7ad77d0385421383c0948a2855925466e6b33bc23942ac5fcbd1427520cfbc31b4d2c79b0b72192ad2691c3c810339d02aaa171.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNqMRQo" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/rNqMRQo" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3247,15 +3203,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-QWVoVrG-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-QWVoVrG-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/gradient-animation-property.d5b14c175b0b2fc4d348c282f1ea2fc253d8e463dab2bc65cab053dadc1211ba80e3846ef46eff662cc8cd4692b8266f6e907afcfdc22a5532a02ef1b47ee688.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/gradient-animation-property.6b3db1038142b42048794e01e7c70dbc800f953b2420d82948a4f112ef1fd3ed5aa9f14d7887584a6413f4a7e00c8e3f29e2be465b3cd391abb578ddf0249f93.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/QWVoVrG" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/QWVoVrG" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3308,15 +3263,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-GReBKQa-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-GReBKQa-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/blob-switch.e526bf15ef8ed0c2a522bf5c96699427fdb42792388735e17eae53ffef65cf5811a8a70f6c704475f5fba9e06e7d3b72ca2ec29daac59cb9b404fcc0fbcab82b.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/blob-switch.9b8b270020d6076c192e4c25a15f3e5fdbb3f72642b4df11bb9426a8209060f88f6ba665ac338da38f1e29d1f9acd330239ead34d3970eb6a3b8e62384ad96b9.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GReBKQa" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GReBKQa" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3369,15 +3323,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-QWPyXwO-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-QWPyXwO-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/dark-side-notifications.51015efff2d2159363855db11d28f05c35292d04d1a33ee9778d578d05a583fb0445ab86a798a65ccae888ac26e987560e449cf718e5b8341a5e1f752dff0d31.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/dark-side-notifications.cf75d56beb8155548b4809f1218d1d8c3d2b3fc7d5e186d00b57ad8195f589557d8ba7cc8802b24262488c0031c6f1acc6ff85dfcfcf11e1759ed10803071c57.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/QWPyXwO" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/QWPyXwO" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3430,14 +3383,13 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-WbxrOJY-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-WbxrOJY-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><picture><img src="https://konstantin-denerz.com/images/projects/c64-logo.72cf5095b15933a3dedd9db382d6e2474268b7a2a689b9c121669a6efc660a4e4ee05e870a3555fecdb7539271b4fced067161ca12ad53a071b183b76982cd59.jpg" alt="" loading="lazy" decoding="async">
                 </picture></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/WbxrOJY" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/WbxrOJY" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3490,15 +3442,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-jOeKXmB-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-jOeKXmB-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/animated-organic-rings.91b61f65307eb07c38b074f07d112c46d8493ac9db311d3308783b5f3ff75e8fbad87c599236e2a63327e002bb6a1f8591da2ac0c09bf0d300a8e45aca73261f.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/animated-organic-rings.5777b8859f502dff46af9d3179924d2d032920b3391dd4266b0f5c658b0f179927765039aae9749dfe05b9ac46b07b5206e8d3f4722e31d1c02487a2ccf294c8.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/jOeKXmB" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/jOeKXmB" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3551,15 +3502,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-PoygNJB-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-PoygNJB-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/abstract-sphere.efafb2462730651a144822266d8550d1d308cb729ef8e17d7aef17188c8d912ad5a22c217b053756cd3c03a7a659e307f63324007d26700ad95f9c412c213000.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/abstract-sphere.e05c4ff2bf7152b42e282320bd2211869f563f5b09ef0bcd1d8f6b64086936f60c1af3703d0a5727210a12434106e9991ae17220451cb0a0fc2f5ad54447bf43.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/PoygNJB" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/PoygNJB" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3612,15 +3562,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-GgRqGgQ-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-GgRqGgQ-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/nano-hexagon.c9980b7ab70c80e9793c4f0ba59a93976571fdc96fe2b21d4656298396b6149c01127387bc667a9c9bf577ca5b9fa9d92eba24147b3cb0103f0f2ba4e0b0a206.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/nano-hexagon.f310c7a99184ab900bb21bf819df59245d8848990841e7360122fcff2ba8a7e42009c597022c20882f94dcafb5642dcc9fcf97226caad631497ff1734ac427c2.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GgRqGgQ" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/GgRqGgQ" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3673,14 +3622,13 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-JjzMzmr-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-JjzMzmr-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><picture><img src="https://konstantin-denerz.com/images/projects/pixel-cherry.a9ab141114b46f29a0e6365c879704eb33f1602753ad72d2bac31522b4eb2ada6d4cd80e5c601b0350cdb71170445ad7f69cf0f82c11edba988f7932295760f7.jpg" alt="" loading="lazy" decoding="async">
                 </picture></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/JjzMzmr" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/JjzMzmr" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3733,15 +3681,14 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-wvOZaeW-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-wvOZaeW-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><video muted loop playsinline preload="none" data-lazyplay="true" poster="https://konstantin-denerz.com/images/projects/3d-text-v2.6fe5dc0aaf783686c6c0d26a39014120d06d55bf4b566b7bfcf1800e296e2f3046244f674309605c813c5ea47efabdc5e096616ae67c5c86222b8b56e19513a1.jpg">
                     <source src="https://konstantin-denerz.com/videos/projects/3d-text-v2.8383165200953ad1a6d02f00aace4a8ad6d278bfdf26db1b9d7758b2e15e5269dd2a64c281a3483c35c0a52ec01b6895a2e439009e00fc088eb4e42d059e2fc3.mp4" type="video/mp4">
                 </video></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/wvOZaeW" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/wvOZaeW" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3794,14 +3741,13 @@
 </article>
 </li>
         
-        <li><article class="project-card" aria-labelledby="project-ZYErNRd-title">
+        <li data-category="css-js"><article class="project-card" aria-labelledby="project-ZYErNRd-title" data-category="css-js">
     <div class="project-card-inner">
         <div class="project-card-media" aria-hidden="true"><picture><img src="https://konstantin-denerz.com/images/projects/keycap.c5464fd647bc4538fb4eca52b30b69e9e6992d75a14103545776bc60a07eea1a7e498b76cb916fa21a866e1724bae3d6e1f6f47ea79618ac293f8710c33ead64.jpg" alt="" loading="lazy" decoding="async">
                 </picture></div>
 
         <div class="project-card-overlay">
-            <div class="project-card-actions">
-                <a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ZYErNRd" target="_blank" rel="noopener">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="https://codepen.io/konstantindenerz/pen/ZYErNRd" target="_blank" rel="noopener">
                     View on CodePen
                 </a>
                 <ul class="project-card-share" aria-label="Share this demo">
@@ -3854,7 +3800,63 @@
 </article>
 </li>
         
+        <li data-category="tools"><article class="project-card" aria-labelledby="project-cc-notifynub-title" data-category="tools">
+    <div class="project-card-inner">
+        <div class="project-card-media" aria-hidden="true"><picture><source srcset="https://konstantin-denerz.com/images/cc-notifynub/cover-cc-notifynub.55e025618b514b36c9b694e1f8f355454fbc25b175a6ff04d6291a8b5f5251b6f7713f74d82246c0935913fce8286b9bd172ad05f793a201a2bc89ddfc28244b.webp" type="image/webp"><img src="https://konstantin-denerz.com/images/cc-notifynub/cover-cc-notifynub.a140ed3d3244176af5f5e517762b63bc46039740445daf3989048dff76cfc29b611c4536439d391cf9cdb81a7c32b04d7280e10714e7e770264382d21c760ad9.jpg" alt="" loading="lazy" decoding="async">
+                </picture></div>
+
+        <div class="project-card-overlay">
+            <div class="project-card-actions"><a class="project-card-cta labs-ripple" href="/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/" target="_blank" rel="noopener">
+                    Read more
+                </a>
+                <ul class="project-card-share" aria-label="Share this demo">
+                    <li>
+                        <a class="project-card-share-btn" href="https://twitter.com/intent/tweet?text=cc-notifynub&#43;%E2%80%94&#43;Pixel-Art&#43;Companion&#43;for&#43;Claude&#43;Code&#43;in&#43;tmux&url=https%3A%2F%2Fkonstantin-denerz.com%2Fcc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux%2F" target="_blank" rel="noopener" aria-label="Share on X">
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-card-share-btn" href="https://bsky.app/intent/compose?text=cc-notifynub&#43;%E2%80%94&#43;Pixel-Art&#43;Companion&#43;for&#43;Claude&#43;Code&#43;in&#43;tmux&#43;https%3A%2F%2Fkonstantin-denerz.com%2Fcc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux%2F" target="_blank" rel="noopener" aria-label="Share on Bluesky">
+                            <svg viewBox="0 0 512 512" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M111.8 62.2C170.2 105.9 233 194.7 256 242.4c23-47.6 85.8-136.4 144.2-180.2 42.1-31.6 110.3-56 110.3 21.8 0 15.5-8.9 130.5-14.1 149.2-18.2 64.8-84.4 81.4-143.3 71.3 56.1 9.6 82.3 67.6 25.7 125.6-107.4 110.2-154.3-27.6-166.3-62.9-1.7-4.9-2.6-7.8-3.3-7.8s-1.6 3-3.3 7.8c-12 35.3-58.9 173.1-166.3 62.9-56.5-58-30.4-116 72.5-133.5-58.9 10.1-124.5-6.5-142.7-71.3C5.4 214.4-3.5 99.4-3.5 83.9c0-77.8 68.2-53.4 110.3-21.8z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-card-share-btn" href="https://mastodon.world/share?text=cc-notifynub&#43;%E2%80%94&#43;Pixel-Art&#43;Companion&#43;for&#43;Claude&#43;Code&#43;in&#43;tmux&#43;https%3A%2F%2Fkonstantin-denerz.com%2Fcc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux%2F" target="_blank" rel="noopener" aria-label="Share on Mastodon">
+                            <svg viewBox="0 0 67 73" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M66.656 25.125s0 11.094-1.406 18.906c-1.094 5-8.75 10.313-17.5 11.406-3.125.313-14.531 2.188-27.813-1.094 0 .782 0 1.563 0 2.188 1.031 8.125 7.75 8.593 14 8.75 6.406.313 12.031-1.563 12.031-1.563l.313 5.782S41.813 71.531 34 72c-4.375.313-9.844-.157-16.25-1.719C.25 65.594 1.344 43.094 1.344 25.125 1.344 9.813 11.188 5.438 11.188 5.438c9.687-4.375 35.625-4.532 45.468 0 0 0 10 4.375 10 19.687zM54.781 44.656C54.781 25.594 55.719 21.531 51.969 17.313c-4.063-4.532-12.5-4.844-16.25.937L34 21.219l-1.875-2.969c-3.75-5.781-12.188-5.469-16.25-.937-3.75 4.218-2.813 8.281-2.813 27.343H20.25V26.844c0-7.813 10-8.125 10 .937v10.844h7.344V27.938c0-9.22 10-8.907 10-1.094v17.812h7.187z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="project-card-share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fkonstantin-denerz.com%2Fcc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5v-9h3v9Zm-1.5-10.3a1.75 1.75 0 1 1 1.75-1.75A1.75 1.75 0 0 1 6.5 8.7ZM19 19h-3v-4.7c0-1.1-.4-1.9-1.4-1.9a1.55 1.55 0 0 0-1.45 1 1.92 1.92 0 0 0-.1.7V19h-3v-9h3v1.3a3 3 0 0 1 2.7-1.5c2 0 3.3 1.3 3.3 4Z"/></svg>
+                        </a>
+                    </li>
+                    <li>
+                        <button class="project-card-share-btn" type="button" data-share-url="https://konstantin-denerz.com/cc-notifynub-a-pixel-art-companion-for-claude-code-in-tmux/" aria-label="Copy link">
+                            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0 0 10h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1ZM8 13h8v-2H8v2Zm9-6h-4v1.9h4a3.1 3.1 0 0 1 0 6.2h-4V17h4a5 5 0 0 0 0-10Z"/></svg>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="project-card-footer">
+                <h2 class="project-card-title" id="project-cc-notifynub-title">cc-notifynub — Pixel-Art Companion for Claude Code in tmux</h2>
+                <ul class="project-card-stats" aria-label="GitHub metrics">
+                    <li class="project-card-stat" aria-label="2 stars">
+                        <svg class="project-card-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2.5l2.9 6.5 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.7l7.1-.7z"/></svg>
+                        <span>2</span>
+                    </li>
+                    <li class="project-card-stat" aria-label="1 forks">
+                        <svg class="project-card-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 4a2.5 2.5 0 1 1-3 2.45V8a2 2 0 0 0 2 2h4V7.95a2.5 2.5 0 1 1 2 0V10h4a2 2 0 0 0 2-2V6.45a2.5 2.5 0 1 1 2 0V8a4 4 0 0 1-4 4h-4v2.05a2.5 2.5 0 1 1-2 0V12H7a4 4 0 0 1-4-4V6.45A2.5 2.5 0 0 1 8 4z"/></svg>
+                        <span>1</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</article>
+</li>
+        
     </ul>
+    <p class="labs-projects-empty" hidden>No projects in this category yet — stay tuned ✨</p>
 </div>
 <script>
 (function () {
@@ -3897,6 +3899,41 @@
   document.addEventListener('click', function (e) {
     if (e.target.closest('.project-card')) return;
     cards.forEach(function (c) { c.classList.remove('is-active'); });
+  });
+})();
+
+
+(function () {
+  var filter = document.querySelector('.labs-projects-filter');
+  var grid = document.querySelector('.labs-projects-grid');
+  var empty = document.querySelector('.labs-projects-empty');
+  if (!filter || !grid) return;
+
+  var options = filter.querySelectorAll('.labs-projects-filter-option');
+  var items = grid.querySelectorAll('[data-category]');
+
+  function apply(category) {
+    var visible = 0;
+    items.forEach(function (card) {
+      var li = card.closest('li');
+      var match = card.dataset.category === category;
+      li.hidden = !match;
+      if (match) visible++;
+    });
+    grid.dataset.filter = category;
+    if (empty) empty.hidden = visible > 0;
+  }
+
+  options.forEach(function (opt) {
+    opt.addEventListener('click', function () {
+      options.forEach(function (o) {
+        o.classList.remove('is-active');
+        o.setAttribute('aria-selected', 'false');
+      });
+      opt.classList.add('is-active');
+      opt.setAttribute('aria-selected', 'true');
+      apply(opt.dataset.filter);
+    });
   });
 })();
 
