@@ -3935,6 +3935,10 @@
       apply(opt.dataset.filter);
     });
   });
+
+  
+  var active = filter.querySelector('.labs-projects-filter-option.is-active');
+  if (active) apply(active.dataset.filter);
 })();
 
 
