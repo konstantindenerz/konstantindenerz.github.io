@@ -67,7 +67,7 @@
    
   <script type="text/javascript" src="/main.min.0c05fe962059caeda20a9595bd3407319044f46dbae308b3256fb98946f848ba.js" defer></script>
   
-  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.c5c0100daf413cd9dd7062969962371ad43c7ec7a5ce3ae488b54ba845d72a34.css" />
+  <link rel="stylesheet" href="https://konstantin-denerz.com/sass/main.min.a0ea22379a8d22d02c468d8eb0fee7334b39455c8f636328f7d9bbb3a723752b.css" />
    
 
   
@@ -192,8 +192,7 @@
 <div class="labs-projects-page">
     <header class="labs-projects-intro">
         <h1>Projects</h1>
-        <div class="labs-projects-description"><p>Welcome to my projects ✨ — a curated grid of CSS and JS demos, experiments, and interactive work that showcase what modern web technologies can do.</p>
-<p>Each card links to the full source on CodePen. Hover to reveal title and community metrics.</p>
+        <div class="labs-projects-description"><p>Animated CSS and JS demos — each one isolates one or more interesting browser techniques so you can see how they work, learn from them, and remix them.</p>
 </div>
     </header>
 
@@ -2136,6 +2135,28 @@
     });
   }, { threshold: 0.25 });
   videos.forEach(function (v) { io.observe(v); });
+})();
+
+
+
+(function () {
+  if (window.matchMedia('(hover: hover)').matches) return;
+  var cards = document.querySelectorAll('.project-card');
+  if (!cards.length) return;
+
+  cards.forEach(function (card) {
+    card.addEventListener('click', function (e) {
+      if (e.target.closest('.project-card-cta')) return;
+      var wasActive = card.classList.contains('is-active');
+      cards.forEach(function (c) { c.classList.remove('is-active'); });
+      if (!wasActive) card.classList.add('is-active');
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.project-card')) return;
+    cards.forEach(function (c) { c.classList.remove('is-active'); });
+  });
 })();
 </script>
 
